@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+  		<script src="./js/html5shiv.min.js"></script>
+  		<script src="./js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+
+	<body>
+		<div class="tabledemo">
+			<h1>
+			 	<span class="span-tdname">固定表头&emsp;<a onclick="history.go(-1)" href="javascript:void(0);">返回上级</a></span>
+			 </h1>
+		</div>
+
+		<h5 class="demo-notice">
+			自定义表格固定表头：注意（需要指定th和td的宽度为定宽，不能用百分比）无需鼠标放上去特效去除table-hover，table组左右 7px内边距，高度33px行高33px单行表格，文本溢出后省略号
+		</h5>
+		<div class="tabledemoWrap">
+
+			<div class="table-fiexdHead">
+				<div class="table-fiexdHeader">
+					<table class="table  table-bordered">
+						<thead>
+							<tr>
+								<th width="300">姓名 </th>
+								<th width="300">年龄</th>
+								<th width="300">班级</th>
+								<th width="300">学号</th>
+								<th>分数</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="table-fiexdBody">
+					<table class="table  table-bordered table-hover">
+						<tbody>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td width="300">陈小花 </td>
+								<td width="300">21</td>
+								<td width="300">五年级</td>
+								<td width="300">89</td>
+								<td>100</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="code">
+			<xmp>
+				<div class="table-fiexdHead">
+					<div class="table-fiexdHeader">
+						<table class="table  table-bordered">
+							<thead>
+								<tr>
+									<th width="300">姓名 </th>
+									<th width="300">年龄</th>
+									<th width="300">班级</th>
+									<th width="300">学号</th>
+									<th>分数</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="table-fiexdBody">
+						<table class="table  table-bordered table-hover">
+							<tbody>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td width="300">陈小花 </td>
+									<td width="300">21</td>
+									<td width="300">五年级</td>
+									<td width="300">89</td>
+									<td>100</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</xmp>
+		</div>
+	</body>
+
+</html>

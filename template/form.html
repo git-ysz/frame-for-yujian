@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/layDate-v5.0.85/layDate-v5.0.85/laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="pd20">
+			<div class="tipBox mr-b15">
+				<span class="crumbsNavB"><a href="">主页</a><a href="">表单录入联合演示</a></span>
+			</div>
+
+			<div class="tabGroup">
+				<div class="tabTitle clearfix">
+					<span class="tabli onTab">表单联合演示</span>
+					<span class="tabli">代码段</span>
+				</div>
+				<div class="tabBody">
+					<div class="tabMain onMain">
+						<!--单行文本-->
+						<div class="form-inputGroup  form-theme1 clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>单行文本输入：</span>
+							<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" placeholder="单行文本输入" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+
+						<!--时间选择-->
+						<div class="form-inputGroup  form-theme1 clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>请选择时间2：</span>
+							<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border time-select2" placeholder="时间选择器2" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+
+						<!--范围文本-->
+						<div class="form-inputGroup form-theme1 clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>范围文本：</span>
+							<div class="input-div">
+								<div class="form-rangeGroup"> <input type="text" class="form-sizeRange focus-border" placeholder="最小值1" /> <span>-</span> <input type="text" class="form-sizeRange focus-border" placeholder="最大值99" /> </div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+
+						<!--复选按钮-->
+						<div class="form-checkboxGroup form-theme1 clearfix mr-b15"> <span class="checkbox-name"><i class="asterisk">*</i>复选框：</span>
+							<div class="checkbox-div">
+								<div class="checkboxWrap">
+									<label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" class="form-checkbox" value="option1">白色 </label>
+									<label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" class="form-checkbox" value="option1">黑色 </label>
+								</div>
+								<strong> <label class="error">验证信息不能为空</label> </strong>
+							</div>
+						</div>
+
+						<!--单行按钮-->
+						<div class="form-radioGroup form-theme1 clearfix mr-b15"> <span class="radio-name"><i class="asterisk">*</i>单选：</span>
+							<div class="radio-div">
+								<div class="radioWrap"> <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" class="form-radio" id="inlineRadio1" value="option1">男 </label> <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" class="form-radio" id="inlineRadio2" value="option2">女 </label> <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" class="form-radio" id="inlineRadio3" value="option3">保密 </label> </div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+
+						<!--图片上传-->
+						<div class="form-imagesGroup form-theme1 clearfix mr-b15"> <span class="images-name"><i class="asterisk">*</i>图片上传：</span>
+							<div class="images-div">
+								<div class="imagesWrap"> <label class="uploadimages"><i class="fa fa-fw fa-image"></i>请上传图片<input type="file" class="form-images"/></label>
+									<div class="imagesList" style="display: none;">
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test16-9.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+									</div>
+								</div> <strong> <label class="error">必须上传文件</label> </strong> </div>
+						</div>
+
+						<!--文件上传-->
+						<div class="form-fileGroup form-theme1 clearfix mr-b15"> <span class="file-name"><i class="asterisk">*</i>文件上传：</span>
+							<div class="file-div">
+								<div class="fileWrap"> <label class="uploadfile"><i class="fa fa-fw fa-file"></i>请选择文件<input type="file" class="form-file"/></label>
+									<div class="uploadFlieList" style="display: none;">
+										<ul>
+											<li> <span class="file-title">2017年1月份电商数据报表.xsl</span> <span class="file-del" data-fileId="1"><i class="fa fa-fw fa-times"></i>删除</span> </li>
+											<li> <span class="file-title">2017年1月份电商数据报表.xsl</span> <span class="file-del" data-fileId="1"><i class="fa fa-fw fa-times"></i>删除</span> </li>
+											<li> <span class="file-title">2017年1月份电商数据报表.xsl</span> <span class="file-del" data-fileId="1"><i class="fa fa-fw fa-times"></i>删除</span> </li>
+										</ul>
+									</div>
+								</div> <strong> <label class="error">必须上传文件</label> </strong> </div>
+						</div>
+
+						<!--下拉选项-->
+						<div class="form-selectGroup form-theme1 clearfix mr-b15"> <span class="select-name"><i class="asterisk">*</i>下拉选项：</span>
+							<div class="select-div">
+								<div class="selectWrap">
+									<select name="" class="control-select" style="width: 100%;">
+										<option value="">—请选择—</option>
+										<option value="">32GB</option>
+										<option value="">64GB</option>
+										<option value="">128GB</option>
+										<option value="">256GB</option>
+										<option value="">512GB</option>
+										<option value="">1024GB</option>
+									</select>
+								</div>
+								<strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+
+						<!--开关组合-->
+						<div class="form-switchGroup form-theme1 mr-b15">
+							<span class="switch-Name"><i class="asterisk">*</i>状态开关：</span>
+							<div class="form-switchWrap">
+								<div class="form-switchInner">
+									<div class="form-switchMain">
+										<div class="form-switchAuto">
+											<span class="switchOn"><i class="fa fa-check"></i></span>
+											<strong></strong>
+											<span class="switchOff"><i class="fa fa-times"></i></span>
+										</div>
+									</div>
+								</div>
+								<strong> <label class="error">验证信息不能为空</label> </strong>
+							</div>
+						</div>
+
+						<!--多下拉选项-->
+						<div class="form-selectGroup form-theme1 clearfix mr-b15"> <span class="select-name"><i class="asterisk">*</i>多组下拉选项：</span>
+							<div class="select-div">
+								<div class="selectWrap">
+									<select name="" class="control-select">
+										<option value="">—请选择—</option>
+										<option value="">32GB</option>
+										<option value="">64GB</option>
+										<option value="">128GB</option>
+										<option value="">256GB</option>
+										<option value="">512GB</option>
+										<option value="">1024GB</option>
+									</select>
+									<select name="" class="control-select">
+										<option value="">—请选择—</option>
+										<option value="">32GB</option>
+										<option value="">64GB</option>
+										<option value="">128GB</option>
+										<option value="">256GB</option>
+										<option value="">512GB</option>
+										<option value="">1024GB</option>
+									</select>
+									<select name="" class="control-select">
+										<option value="">—请选择—</option>
+										<option value="">32GB</option>
+										<option value="">64GB</option>
+										<option value="">128GB</option>
+										<option value="">256GB</option>
+										<option value="">512GB</option>
+										<option value="">1024GB</option>
+									</select>
+								</div>
+								<strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--文本域-->
+						<div class="form-textareaGroup form-theme1 clearfix mr-b15"> <span class="textarea-name"><i class="asterisk">*</i>短文本域：</span>
+							<div class="textarea-div"> <textarea class="form-textareaFixedWidth focus-border" placeholder="请输入内容"></textarea> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+
+						<!--超长文本域-->
+						<div class="form-longTextarea mr-b15">
+							<div class="longTexttitle">文本表头</div> <textarea name="" rows="" cols=""></textarea>
+							<div class="textChecking">文本验证</div>
+						</div>
+
+					</div>
+					<div class="tabMain">
+						<xmp>
+							<!--单行文本-->
+							<div class="form-inputGroup  form-theme1 clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>单行文本输入：</span>
+								<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" placeholder="单行文本输入" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+							</div>
+
+							<!--时间选择-->
+							<div class="form-inputGroup  form-theme1 clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>请选择时间：</span>
+								<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border time-select" placeholder="单行文本输入" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+							</div>
+
+							<!--范围文本-->
+							<div class="form-inputGroup form-theme1 clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>范围文本：</span>
+								<div class="input-div">
+									<div class="form-rangeGroup"> <input type="text" class="form-sizeRange focus-border" placeholder="最小值1" /> <span>-</span> <input type="text" class="form-sizeRange focus-border" placeholder="最大值99" /> </div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+							</div>
+
+							<!--复选按钮-->
+							<div class="form-checkboxGroup form-theme1 clearfix mr-b15"> <span class="checkbox-name"><i class="asterisk">*</i>复选框：</span>
+								<div class="checkbox-div">
+									<div class="checkboxWrap">
+										<label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" class="form-checkbox" value="option1">白色 </label>
+										<label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" class="form-checkbox" value="option1">黑色 </label>
+									</div>
+									<strong> <label class="error">验证信息不能为空</label> </strong>
+								</div>
+							</div>
+
+							<!--单行按钮-->
+							<div class="form-radioGroup form-theme1 clearfix mr-b15"> <span class="radio-name"><i class="asterisk">*</i>单选：</span>
+								<div class="radio-div">
+									<div class="radioWrap"> <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" class="form-radio" id="inlineRadio1" value="option1">男 </label> <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" class="form-radio" id="inlineRadio2" value="option2">女 </label> <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" class="form-radio" id="inlineRadio3" value="option3">保密 </label> </div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+							</div>
+
+							<!--图片上传-->
+							<div class="form-imagesGroup form-theme1 clearfix mr-b15"> <span class="images-name"><i class="asterisk">*</i>图片上传：</span>
+								<div class="images-div">
+									<div class="imagesWrap"> <label class="uploadimages"><i class="fa fa-fw fa-image"></i>请上传图片<input type="file" class="form-images"/></label>
+										<div class="imagesList" style="display: none;">
+											<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+											<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test16-9.jpg" alt="" /> </div>
+											<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+											<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+											<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+											<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+										</div>
+									</div> <strong> <label class="error">必须上传文件</label> </strong> </div>
+							</div>
+
+							<!--文件上传-->
+							<div class="form-fileGroup form-theme1 clearfix mr-b15"> <span class="file-name"><i class="asterisk">*</i>文件上传：</span>
+								<div class="file-div">
+									<div class="fileWrap"> <label class="uploadfile"><i class="fa fa-fw fa-file"></i>请选择文件<input type="file" class="form-file"/></label>
+										<div class="uploadFlieList" style="display: none;">
+											<ul>
+												<li> <span class="file-title">2017年1月份电商数据报表.xsl</span> <span class="file-del" data-fileId="1"><i class="fa fa-fw fa-times"></i>删除</span> </li>
+												<li> <span class="file-title">2017年1月份电商数据报表.xsl</span> <span class="file-del" data-fileId="1"><i class="fa fa-fw fa-times"></i>删除</span> </li>
+												<li> <span class="file-title">2017年1月份电商数据报表.xsl</span> <span class="file-del" data-fileId="1"><i class="fa fa-fw fa-times"></i>删除</span> </li>
+											</ul>
+										</div>
+									</div> <strong> <label class="error">必须上传文件</label> </strong> </div>
+							</div>
+
+							<!--下拉选项-->
+							<div class="form-selectGroup form-theme1 clearfix mr-b15"> <span class="select-name"><i class="asterisk">*</i>下拉选项：</span>
+								<div class="select-div">
+									<div class="selectWrap">
+										<select name="" class="control-select" style="width: 100%;">
+											<option value="">—请选择—</option>
+											<option value="">32GB</option>
+											<option value="">64GB</option>
+											<option value="">128GB</option>
+											<option value="">256GB</option>
+											<option value="">512GB</option>
+											<option value="">1024GB</option>
+										</select>
+									</div>
+									<strong> <label class="error">验证信息不能为空</label> </strong> </div>
+							</div>
+
+							<!--开关组合-->
+							<div class="form-switchGroup form-theme1 mr-b15">
+								<span class="switch-Name"><i class="asterisk">*</i>状态开关：</span>
+								<div class="form-switchWrap">
+									<div class="form-switchInner">
+										<div class="form-switchMain">
+											<div class="form-switchAuto">
+												<span class="switchOn"><i class="fa fa-check"></i></span>
+												<strong></strong>
+												<span class="switchOff"><i class="fa fa-times"></i></span>
+											</div>
+										</div>
+									</div>
+									<strong> <label class="error">验证信息不能为空</label> </strong>
+								</div>
+							</div>
+
+							<!--多下拉选项-->
+							<div class="form-selectGroup form-theme1 clearfix mr-b15"> <span class="select-name"><i class="asterisk">*</i>多组下拉选项：</span>
+								<div class="select-div">
+									<div class="selectWrap">
+										<select name="" class="control-select">
+											<option value="">—请选择—</option>
+											<option value="">32GB</option>
+											<option value="">64GB</option>
+											<option value="">128GB</option>
+											<option value="">256GB</option>
+											<option value="">512GB</option>
+											<option value="">1024GB</option>
+										</select>
+										<select name="" class="control-select">
+											<option value="">—请选择—</option>
+											<option value="">32GB</option>
+											<option value="">64GB</option>
+											<option value="">128GB</option>
+											<option value="">256GB</option>
+											<option value="">512GB</option>
+											<option value="">1024GB</option>
+										</select>
+										<select name="" class="control-select">
+											<option value="">—请选择—</option>
+											<option value="">32GB</option>
+											<option value="">64GB</option>
+											<option value="">128GB</option>
+											<option value="">256GB</option>
+											<option value="">512GB</option>
+											<option value="">1024GB</option>
+										</select>
+									</div>
+									<strong> <label class="error">验证信息不能为空</label> </strong> </div>
+							</div>
+							<!--文本域-->
+							<div class="form-textareaGroup  clearfix mr-b15"> <span class="textarea-name"><i class="asterisk">*</i>短文本域：</span>
+								<div class="textarea-div"> <textarea class="form-textareaFixedWidth focus-border" placeholder="请输入内容"></textarea> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+							</div>
+
+							<!--超长文本域-->
+							<div class="form-longTextarea mr-b15">
+								<div class="longTexttitle">文本表头</div> <textarea name="" rows="" cols=""></textarea>
+								<div class="textChecking">文本验证</div>
+							</div>
+
+						</xmp>
+					</div>
+				</div>
+
+				<div style="padding-left: 140px;" class="clearfix pd15 mr-t15 border01">
+					<button class="btn btn-sure pull-left mr-r15">提交表单</button>
+					<button class="btn btn-cancel pull-left">取消返回</button>
+				</div>
+				<!--表单代码-->
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$('.form-switchAuto').click(function() {
+				if(!$(this).hasClass('switch-drive')) {
+					$(this).addClass('switch-drive');
+				} else {
+					$(this).removeClass('switch-drive');
+				}
+			})
+
+			laydate.render({
+				elem: '.time-select2',
+				value: '1989-10-14',
+				theme: '#ff6600'
+			});
+			$('.tabGroup').on('click', '.tabli', function() {
+				$(this).addClass('onTab').siblings().removeClass('onTab');
+				var onTabIndex = $(this).index();
+				$('.tabMain').removeClass('onMain');
+				$('.tabMain').eq(onTabIndex).addClass('onMain');
+			})
+		</script>
+
+	</body>
+
+</html>

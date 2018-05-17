@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="tabledemo">
+			<h1>
+			 	<span class="span-tdname">选项卡&emsp;<a onclick="history.go(-1)" href="javascript:void(0);">返回上级</a></span>
+			 </h1>
+		</div>
+
+		<h5 class="demo-notice">
+			不基于bootstrap的选项卡
+		</h5>
+
+		<div class="tab-demo">
+			<div class="tabGroup">
+				<div class="tabTitle clearfix">
+					<span class="tabli onTab">选项卡1</span>
+					<span class="tabli">选项卡2</span>
+					<span class="tabli">选项卡3</span>
+					<span class="tabli">选项卡4</span>
+				</div>
+				<div class="tabBody">
+					<div class="tabMain onMain">内容区域1</div>
+					<div class="tabMain">内容区域2</div>
+					<div class="tabMain">内容区域3</div>
+					<div class="tabMain">内容区域4</div>
+				</div>
+			</div>
+		</div>
+		<div class="code">
+			<xmp>
+				<div class="tab-demo">
+					<div class="tabGroup">
+						<div class="tabTitle clearfix">
+							<span class="tabli onTab">选项卡1</span>
+							<span class="tabli">选项卡2</span>
+							<span class="tabli">选项卡3</span>
+							<span class="tabli">选项卡4</span>
+						</div>
+						<div class="tabBody">
+							<div class="tabMain onMain">内容区域1</div>
+							<div class="tabMain">内容区域2</div>
+							<div class="tabMain">内容区域3</div>
+							<div class="tabMain">内容区域4</div>
+						</div>
+					</div>
+				</div>
+
+				<script type="text/javascript">
+					$(function() {
+						$('.tabGroup').on('click', '.tabli', function() {
+							$(this).addClass('onTab').siblings().removeClass('onTab');
+							var onTabIndex = $(this).index();
+							$('.tabMain').removeClass('onMain');
+							$('.tabMain').eq(onTabIndex).addClass('onMain');
+						})
+					})
+				</script>
+			</xmp>
+		</div>
+
+		<script type="text/javascript">
+			$(function() {
+				$('.tabGroup').on('click', '.tabli', function() {
+					$(this).addClass('onTab').siblings().removeClass('onTab');
+					var onTabIndex = $(this).index();
+					$('.tabMain').removeClass('onMain');
+					$('.tabMain').eq(onTabIndex).addClass('onMain');
+				})
+			})
+		</script>
+	</body>
+
+</html>

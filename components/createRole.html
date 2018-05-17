@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<link href="../plugins/jquery-master/jquery-confirm.css" rel="stylesheet">
+		<script src="../plugins/jquery-master/jquery-confirm.js"></script>
+
+		<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="pd20">
+			<div class="tipBox ">
+				<span class="crumbsNavB"><a href="">主页</a><a href="">css3伪类休息</a></span>
+			</div>
+
+			<div class="mr-b15 pd-t15">
+				<div class="tip-nothing mr-b15">温馨提示：权限配置用作于超级管理员管理下级管理员操作权限 </div>
+
+				<div class="mr-b15">
+					<table class="table table-bordered table-default">
+						<colgroup>
+							<col width="135" />
+							<col />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>名称 </th>
+								<th>说明</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>角色名称 </td>
+								<td>超级管理员</td>
+							</tr>
+							<tr>
+								<td>角色简称 </td>
+								<td>拥有一切权限的超级管理员</td>
+							</tr>
+							<tr>
+								<td>角色描述 </td>
+								<td>拥有一切权限的超级管理员拥有一切权限的超级管理员拥有一切权限的超级管理员拥有一切权限的超级管理员</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="roleName">
+					<table class="table table-bordered table-show table-hover">
+						<colgroup>
+							<col width="135" />
+							<col />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>权限名称 </th>
+								<th>权限配置</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+
+				<div class="roleTable mr-b15">
+					<table class="table table-bordered table-show table-hover">
+						<colgroup>
+							<col width="135" />
+							<col />
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>
+									<label for="" class="topRole">
+										<input autocomplete="off" type="checkbox">
+										<i><em class="fa fa-fw fa-cog"></em>系统主页 </i>
+									</label>
+								</td>
+								<td>
+									<!--子全选-->
+									<table class="roleTableSon">
+										<tbody>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--子全选-->
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="" class="topRole">
+										<input autocomplete="off" type="checkbox">
+										<i><em class="fa fa-fw fa-cog"></em>系统主页 </i>
+									</label>
+								</td>
+								<td>
+									<!--子全选-->
+									<table class="roleTableSon">
+										<tbody>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--子全选-->
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="" class="topRole">
+										<input autocomplete="off" type="checkbox">
+										<i><em class="fa fa-fw fa-cog"></em>系统主页 </i>
+									</label>
+								</td>
+								<td>
+									<!--子全选-->
+									<table class="roleTableSon">
+										<tbody>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--子全选-->
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="" class="topRole">
+										<input autocomplete="off" type="checkbox">
+										<i><em class="fa fa-fw fa-cog"></em>系统主页 </i>
+									</label>
+								</td>
+								<td>
+									<!--子全选-->
+									<table class="roleTableSon">
+										<tbody>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="sonRole" width="200">
+													<label for="">
+														<input autocomplete="off" type="checkbox">
+														<i>系统主页 </i>
+													</label>
+												</td>
+												<td class="roleCURD">
+													<div class="roleC">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="1" name="op" type="checkbox">
+														<i>新增 </i>
+														</label>
+													</div>
+													<div class="roleU">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="2" name="op" type="checkbox">
+														<i>修改 </i>
+														</label>
+													</div>
+													<div class="roleR">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="4" name="op" type="checkbox">
+														<i>查看 </i>
+														</label>
+													</div>
+													<div class="roleD">
+														<label for="">
+														<input autocomplete="off" class="cCheckbox" value="8" name="op" type="checkbox">
+														<i>删除 </i>
+														</label>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--子全选-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="pd5 clearfix border01">
+					<div class="pull-left" style="font-size: 12px;color: #666;height: 30px;line-height: 30px;padding-left: 130px;">
+						<button class="btn btn-sure mr-r5">保存文档</button>
+						<button class="btn btn-cancel">返回上级</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

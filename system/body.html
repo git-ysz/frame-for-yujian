@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="pd20 bodyMain">
+			<div class="bodyMainheader mr-b15">
+				尊敬的"admin",欢迎访问 "驭箭信息管理系统"!
+			</div>
+
+			<div class="blockList clearfix mr-b15">
+				<div class="blockli">
+					<span>
+ 	 				<i class="fa fa-fw fa-user"></i>
+ 	 			</span>
+					<div>
+						<dl>
+							<dt>3566</dt>
+							<dd>注册用户数量</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="blockli">
+					<span>
+ 	 				<i class="fa fa-fw fa-align-left"></i>
+ 	 			</span>
+					<div>
+						<dl>
+							<dt>3566</dt>
+							<dd>商品发布总量</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="blockli">
+					<span>
+ 	 				<i class="fa fa-fw fa-jpy"></i>
+ 	 			</span>
+					<div>
+						<dl>
+							<dt>3566</dt>
+							<dd>拥有资金总额</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="blockli">
+					<span>
+ 	 				<i class="fa fa-fw fa-user"></i>
+ 	 			</span>
+					<div>
+						<dl>
+							<dt>3566</dt>
+							<dd>注册用户数量</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="blockEl">
+					<dl>
+						<dt>欢迎来到"驭箭信息管理系统"！</dt>
+						<dd>版本信息：当前系统版本2017.12.08,最新版本,无需更新！</dd>
+					</dl>
+				</div>
+			</div>
+
+			<table class="bodyEchart mr-b15">
+				<tr>
+					<td valign="top">
+						<script src='http://www.ichartjs.com/ichart.latest.min.js'></script>
+						<script type='text/javascript'>
+							$(function() {
+								var chart = iChart.create({
+									render: "ichart-render",
+									width: 498,
+									height: 373,
+									background_color: "#fefefe",
+									gradient: false,
+									color_factor: 0.2,
+									border: {
+										color: "#dddddd",
+										width: 1
+									},
+									align: "center",
+									offsetx: 0,
+									offsety: 0,
+									sub_option: {
+										border: {
+											color: "#BCBCBC",
+											width: 1
+										},
+										label: {
+											fontweight: 500,
+											fontsize: 11,
+											color: "#4572a7",
+											sign: "square",
+											sign_size: 12,
+											border: {
+												color: "#BCBCBC",
+												width: 1
+											},
+											background_color: "#fefefe"
+										}
+									},
+									shadow: true,
+									shadow_color: "#666666",
+									shadow_blur: 2,
+									showpercent: false,
+									column_width: "70%",
+									bar_height: "70%",
+									radius: "90%",
+									title: {
+										text: "驭箭信息",
+										color: "#111111",
+										fontsize: 20,
+										textAlign: "center",
+										font: "微软雅黑",
+										height: 30,
+										offsetx: 0,
+										offsety: 0
+									},
+									subtitle: {
+										color: "#111111",
+										fontsize: 16,
+										textAlign: "center",
+										font: "微软雅黑",
+										height: 20,
+										offsetx: 0,
+										offsety: 0,
+										text: ""
+									},
+									footnote: {
+										color: "#111111",
+										fontsize: 12,
+										textAlign: "right",
+										font: "微软雅黑",
+										height: 20,
+										offsetx: 0,
+										offsety: 0,
+										text: ""
+									},
+									legend: {
+										enable: false,
+										background_color: "#fefefe",
+										color: "#333333",
+										fontsize: 12,
+										border: {
+											color: "#BCBCBC",
+											width: 1
+										},
+										column: 1,
+										align: "right",
+										valign: "center",
+										offsetx: 0,
+										offsety: 0
+									},
+									coordinate: {
+										width: "80%",
+										height: "84%",
+										background_color: "#ffffff",
+										axis: {
+											color: "#a5acb8",
+											width: [1, "", 1, ""]
+										},
+										grid_color: "#d9d9d9",
+										label: {
+											fontweight: 500,
+											color: "#666666",
+											fontsize: 11
+										}
+									},
+									label: {
+										fontweight: 500,
+										color: "#666666",
+										fontsize: 11
+									},
+									type: "pie2d",
+									data: [{
+										name: "名称A",
+										value: 20,
+										color: "#c84f0d"
+									}, {
+										name: "名称B",
+										value: 30,
+										color: "#007013"
+									}, {
+										name: "名称C",
+										value: 40,
+										color: "#0090e3"
+									}]
+								});
+								chart.draw();
+							});
+						</script>
+						<div class="echart">
+							<div id='ichart-render'></div>
+						</div>
+					</td>
+					<td valign="top">
+						<table class="table table-bordered table-default table-hover">
+							<colgroup>
+								<col width="60" />
+								<col width="150" />
+								<col />
+								<col width="150" />
+								<col width="100" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>序号 </th>
+									<th>标题</th>
+									<th>内容</th>
+									<th>分类</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+								<tr>
+									<td>15 </td>
+									<td>表格标题显示</td>
+									<td>表格内容显示表格内容显示表格内容显示</td>
+									<td>分类待定</td>
+									<td><i class="fa fa-fw fa-eye"></i>查阅</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!--其他-->
+			<table class="table table-bordered table-default table-hover">
+				<colgroup>
+					<col width="120"/>
+					<col />
+				</colgroup>
+				<tr>
+					<td style="background: #f2f2f2;">域名</td>
+					<td>www.baidu.com</td>
+				</tr>
+				<tr>
+					<td style="background: #f2f2f2;">商业授权编号</td>
+					<td>123564889789</td>
+				</tr>
+				<tr>
+					<td style="background: #f2f2f2;">版权</td>
+					<td>Copyright © 2017-2020 驭箭信息  </td>
+				</tr>
+				 
+			</table>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+  		<script src="./js/html5shiv.min.js"></script>
+  		<script src="./js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+
+	<body>
+		<div class="tabledemo">
+			<h1>
+			 	<span class="span-tdname">js唤起模态框&emsp;<a onclick="history.go(-1)" href="javascript:void(0);">返回上级</a></span>
+			 </h1>
+		</div>
+
+		<h5 class="demo-notice">
+			模态框是进行过优化的，增加了层次感
+		</h5>
+
+		<div class="modalboxDemo">
+			<button class="btn btn-sure" id="showModl">js唤起模态框</button>
+		</div>
+
+		<!--模态框-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-default modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">模态框标题</h4>
+					</div>
+					<div class="modal-body">
+						模态框，bootstrap源生方式添加 在需要唤起的地方添加data-toggle="modal" data-target="#myModal".需要对模态框进行定制，或者别的需求，可以到官网去看文档
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-sure">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--模态框-->
+
+		<div class="code">
+			<xmp>
+				<button class="btn btn-sure" id="showModl">js唤起模态框</button>
+				<script type="text/javascript">
+					$('#showModl').click(function() {
+						$('#myModal').modal('show');
+					})
+				</script>
+
+				<!--模态框-->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog modal-default modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">模态框标题</h4>
+							</div>
+							<div class="modal-body">
+								模态框，bootstrap源生方式添加 在需要唤起的地方添加data-toggle="modal" data-target="#myModal"
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+								<button type="button" class="btn btn-sure">确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--模态框-->
+			</xmp>
+		</div>
+
+		<script type="text/javascript">
+			$('#showModl').click(function() {
+				$('#myModal').modal('show');
+			})
+		</script>
+	</body>
+
+</html>

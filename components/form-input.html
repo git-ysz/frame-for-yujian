@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+  		<script src="./js/html5shiv.min.js"></script>
+  		<script src="./js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+
+	<body>
+		<div class="info2">
+			<table class="table">
+				<thead>
+					<tr>
+						<th colspan="2"><span class="span-tdname">input组&emsp;<a onclick="history.go(-1)" href="javascript:void(0);">返回上级</a></span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="example">
+								<h5>1、Input：标题定宽文字居右、右侧input自适应、获取焦点时边线变红色,不需要的话去掉.focus-border这个类 </h5>
+								<div class="form-inputGroup clearfix">
+									<span class="input-name"><i class="asterisk">*</i>表单标题：</span>
+									<div class="input-div">
+										<input type="text" class="form-inputFull focus-border" placeholder="请输入内容" />
+									</div>
+								</div>
+								<div class="code">
+									<xmp>
+										<div class="form-inputGroup clearfix">
+											<span class="input-name"><i class="asterisk">*</i>表单标题：</span>
+											<div class="input-div">
+												<input type="text" class="form-inputFull focus-border" placeholder="请输入内容" />
+											</div>
+										</div>
+									</xmp>
+								</div>
+							</div>
+							
+							
+							<div class="example">
+								<h5>2、Input不含前置标题 </h5>
+								 <input class="inputFxheight" placeholder="请输入标题" type="text">
+								<div class="code">
+									<xmp>
+										<input class="inputFxheight" placeholder="请输入标题" type="text">
+									</xmp>
+								</div>
+							</div>
+							
+							<div class="example">
+								<h5>3、Input：标题定宽文字居右、右侧input宽固定450px、获取焦点时边线变红色,不需要的话去掉.focus-border这个类 </h5>
+								<div class="form-inputGroup clearfix">
+									<span class="input-name"><i class="asterisk">*</i>表单标题：</span>
+									<div class="input-div">
+										<input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入内容" />
+									</div>
+								</div>
+								<div class="code">
+									<xmp>
+										<div class="form-inputGroup clearfix">
+											<span class="input-name"><i class="asterisk">*</i>表单标题：</span>
+											<div class="input-div">
+												<input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入内容" />
+											</div>
+										</div>
+									</xmp>
+								</div>
+							</div>
+
+							<div class="example">
+								<h5>4、Input：标题定宽文字居右、右侧input宽固定450px、获取焦点时边线变红色,不需要的话去掉.focus-border这个类 ,input右侧紧跟表单验证提示信息</h5>
+								<div class="form-inputGroup clearfix">
+									<span class="input-name"><i class="asterisk">*</i>表单标题：</span>
+									<div class="input-div">
+										<input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入内容" />
+										<strong>
+											<label class="error">验证信息不能为空</label>
+										</strong>
+									</div>
+								</div>
+								<div class="code">
+									<xmp>
+										<div class="form-inputGroup clearfix">
+											<span class="input-name"><i class="asterisk">*</i>表单标题：</span>
+											<div class="input-div">
+												<input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入内容" />
+												<strong>
+													<label class="error">验证信息不能为空</label>
+												</strong>
+											</div>
+										</div>
+									</xmp>
+								</div>
+							</div>
+
+							
+							<div class="example">
+								<h5>5、范围Input：标题定宽文字居右、右侧input宽固定450px、获取焦点时边线变红色,不需要的话去掉.focus-border这个类 ,input右侧紧跟表单验证提示信息</h5>
+								<div class="form-inputGroup clearfix">
+									<span class="input-name"><i class="asterisk">*</i>请选择范围：</span>
+									<div class="input-div">
+										<div class="form-rangeGroup">
+											<input type="text" class="form-sizeRange focus-border" placeholder="最小值1" />
+											<span>-</span>
+											<input type="text" class="form-sizeRange focus-border" placeholder="最大值99" />
+										</div>
+										<strong>
+											<label class="error">验证信息不能为空</label>
+										</strong>
+									</div>
+								</div>
+								<div class="code">
+									<xmp>
+										<div class="form-inputGroup clearfix">
+											<span class="input-name"><i class="asterisk">*</i>请选择范围：</span>
+											<div class="input-div">
+												<div class="form-rangeGroup">
+													<input type="text" class="form-sizeRange focus-border" placeholder="最小值1" />
+													<span>-</span>
+													<input type="text" class="form-sizeRange focus-border" placeholder="最大值99" />
+												</div>
+												<strong>
+													<label class="error">验证信息不能为空</label>
+												</strong>
+											</div>
+										</div>
+									</xmp>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+
+</html>

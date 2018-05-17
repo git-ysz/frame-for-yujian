@@ -1,0 +1,6 @@
+﻿1、富文本编辑器   kindeditor
+2、弹窗confirm http://craftpip.github.io/jquery-confirm/
+3、基于layer的弹窗层	  layer-v3.1.0.zip
+4、基于layer的时间选择器  layDate-v5.0.85.zip demo Api http://www.layui.com/laydate/?alone
+5、图表插件http://www.ichartjs.com/designer/index.html
+6、时间选择器TimeSelect.zip 基于layUi旧版本不建议用

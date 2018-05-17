@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link href="../plugins/jquery-master/jquery-confirm.css" rel="stylesheet">
+		<script src="../plugins/jquery-master/jquery-confirm.js"></script>
+		<script charset="utf-8" src="../plugins/kindeditor/kindeditor-all-min.js"></script>
+		<script charset="utf-8" src="../plugins/kindeditor/lang/zh-CN.js"></script>
+		<script src="../plugins/layDate-v5.0.85/layDate-v5.0.85/laydate/laydate.js"></script> 
+		<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.ke-container {
+				border: none!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="pd20">
+			<div class="tipBox mr-b15">
+				<span class="crumbsNavB"><a href="">主页</a><a href="">css3伪类休息</a></span>
+			</div>
+			<div class="mr-b15">
+				<div class="tab-demo" style="padding: 0;">
+					<div class="tabGroup">
+						<div class="tabTitle clearfix">
+							<span class="tabli onTab">常规选项</span>
+							<span class="tabli">栏目内容 </span>
+							<span class="tabli">栏目内容(副本) </span>
+						</div>
+						<div class="tabBody">
+							<div class="tabMain onMain">
+								<div class="form-inputGroup clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>标题：</span>
+									<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入标题" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+								</div>
+								<div class="form-selectGroup clearfix mr-b15"> <span class="select-name"><i class="asterisk">*</i>所属栏目：</span>
+									<div class="select-div">
+										<div class="selectWrap">
+											<select name="" class="control-select">
+												<option value="">—请选择—</option>
+												<option value="">32GB</option>
+												<option value="">64GB</option>
+												<option value="">128GB</option>
+												<option value="">256GB</option>
+												<option value="">512GB</option>
+												<option value="">1024GB</option>
+											</select>
+										</div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+								</div>
+								<div class="form-inputGroup clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>发布时间：</span>
+									<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" id="time" placeholder="请选择发布时间" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+								</div>
+								<div class="form-imagesGroup clearfix mr-b15"> <span class="images-name"><i class="asterisk">*</i>缩略图：</span>
+									<div class="images-div">
+										<div class="imagesWrap"> <label class="uploadimages">+ 请上传图片<input type="file" class="form-images"/></label>
+											<div class="imagesList">
+												<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+											</div>
+										</div> <strong> <label class="error">必须上传文件</label> </strong> </div>
+								</div>
+								<div class="form-inputGroup clearfix mr-b15"> <span class="input-name">简标题：</span>
+									<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入简标题" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+								</div>
+								<div class="form-inputGroup clearfix mr-b15"> <span class="input-name">关键词：</span>
+									<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入SEO关键词" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+								</div>
+								<div class="form-textareaGroup clearfix mr-b15"> <span class="textarea-name">摘要：</span>
+									<div class="textarea-div"> <textarea class="form-textareaFixedWidth focus-border" placeholder="请输入SEO摘要"></textarea> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+								</div>
+								<div class="form-inputGroup clearfix mr-b15"> <span class="input-name">来源：</span>
+									<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入来源" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+								</div>
+								<div class="form-inputGroup clearfix mr-b15"> <span class="input-name">作者：</span>
+									<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入作者" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+								</div>
+								<div class="form-inputGroup clearfix"> <span class="input-name">点击次数：</span>
+									<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入排列顺序" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+								</div>
+							</div>
+
+							<div class="tabMain" style="padding: 0!important;">
+								<div class="textarea-rich" style="width: 100%;"></div>
+							</div>
+							<div class="tabMain" style="padding: 0!important;">
+								<div class="textarea-rich2" style="width: 100%;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pd5 clearfix border01">
+				<div class="pull-left" style="font-size: 12px;color: #666;height: 30px;line-height: 30px;padding-left: 130px;">
+					<button class="btn btn-sure mr-r5">保存文档</button>
+					<button class="btn btn-cancel">返回上级</button>
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			KindEditor.ready(function(K) {
+				window.editor = K.create('.textarea-rich,.textarea-rich2', {
+					themeType: 'simple',
+					height: "400px"
+				});
+			});
+
+			laydate.render({
+				elem: '#time',
+				theme: '#ff6600',
+				value: new Date()
+			});
+		</script>
+
+		<script type="text/javascript">
+			$(function() {
+
+				$('.tabGroup').on('click', '.tabli', function() {
+					$(this).addClass('onTab').siblings().removeClass('onTab');
+					var onTabIndex = $(this).index();
+					$('.tabMain').removeClass('onMain');
+					$('.tabMain').eq(onTabIndex).addClass('onMain');
+				})
+
+				$('.form-switchAuto').click(function() {
+					if(!$(this).hasClass('switch-drive')) {
+						$(this).addClass('switch-drive');
+					} else {
+						$(this).removeClass('switch-drive');
+					}
+				})
+
+				$('.time-select').focus(function() {
+					laydate({
+						istime: true,
+						format: 'YYYY-MM-DD hh:mm:ss'
+					});
+				})
+
+				$('.addThis').click(function() {
+					$('#myModal').modal('show');
+				})
+			})
+		</script>
+	</body>
+
+</html>

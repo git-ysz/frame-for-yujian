@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--confirm弹窗-->
+		<link href="../plugins/jquery-master/jquery-confirm.css" rel="stylesheet">
+		<script src="../plugins/jquery-master/jquery-confirm.js"></script>
+
+		<!--[if lt IE 9]>
+  		<script src="./js/html5shiv.min.js"></script>
+  		<script src="./js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+
+	<body>
+		<div class="tabledemo">
+			<h1>
+			 	<span class="span-tdname">弹窗confirm&emsp;<a onclick="history.go(-1)" href="javascript:void(0);">返回上级</a></span>
+			 </h1>
+		</div>
+
+		<h5 class="demo-notice">
+			弹窗confirm   <a href="http://craftpip.github.io/jquery-confirm/#namespaced-bootstrap" target="_blank">demo</a>&emsp;&emsp;&emsp;<a href="http://www.jq22.com/demo/jqueryConfirm20160413/" target="_blank">上个打不开用这个</a>
+		</h5>
+
+		<div class="modalboxDemo">
+			<span class="btn btn-sure" id="sure">确定</span>
+			<hr />
+			<button class="btn btn-sure" id="confirm">确定,取消,其他</button>
+			<hr />
+			<span class="btn btn-sure" id="minput">输入密码</span>
+		</div>
+
+		<script type="text/javascript">
+			$('#sure').click(function() {
+				$.alert({
+					title: '提示信息',
+					content: '该数据已存在',
+					icon: 'fa fa-warning',
+					animateFromElement: false,
+					content: '该数据已存在',
+					buttons: {
+						confirm: {
+							text: "确定",
+							btnClass: 'btn-sure',
+							keys: ['enter'],
+							action: function() {
+								$.alert("你点击了确认按钮！")
+
+							}
+						}
+					}
+				});
+			})
+			//确定取消
+			$('#confirm').click(function() {
+				$.confirm({
+					title: '提示信息',
+					content: '您真的确定要删除这条信息吗?',
+					icon: 'fa fa-warning',
+					animateFromElement: false,
+					buttons: {
+						confirm: {
+							text: "确定",
+							btnClass: 'btn-sure',
+							keys: ['enter'],
+							animation: 'zoom',
+							action: function() {
+								$.alert("你点击了确认按钮！")
+
+							}
+						},
+						cancel: {
+							text: "取消",
+							btnClass: 'btn-cancel',
+							keys: ['esc'],
+							action: function() {
+								$.alert("你点击了取消按钮！")
+							}
+						},
+						somethingElse: {
+							text: '其他',
+							btnClass: 'btn-danger',
+							keys: ['enter', 'shift'],
+							action: function() {
+								$.alert('你点了其他');
+							}
+						}
+					}
+				});
+			})
+
+			//请输入类型
+			$('#minput').click(function() {
+				$.confirm({
+					title: '请输入密码',
+					animation: 'scale',
+					animateFromElement: false,
+					content: '' +
+						'<form action="" class="formName">' +
+						'<div class="form-group">' +
+						'<input type="text" placeholder="请输入密码" class="name form-control" required />' +
+						'</div>' +
+						'</form>',
+					buttons: {
+						formSubmit: {
+							text: "确定",
+							btnClass: 'btn-sure',
+							action: function() {
+								var name = this.$content.find('.name').val();
+								if(!name) {
+									$.alert('您输入的密码是' + name);
+									return false;
+								}
+								$.alert('修改成功' + name);
+							}
+						},
+						cancel: {
+							text: "取消",
+							btnClass: 'btn-cancel',
+							keys: ['esc'],
+							action: function() {
+								$.alert("你点击了取消按钮！")
+							}
+						},
+					}
+					//					,
+					//					onContentReady: function() {
+					//						// bind to events
+					//						var jc = this;
+					//						this.$content.find('form').on('submit', function(e) {
+					//							// if the user submits the form by pressing enter in the field.
+					//							e.preventDefault();
+					//							jc.$$formSubmit.trigger('click'); // reference the button and click it
+					//						});
+					//					}
+				});
+			})
+		</script>
+		<div class="code">
+			<xmp>
+
+				<!--confirm弹窗-->
+				<link href="../plugins/jquery-master/jquery-confirm.css" rel="stylesheet">
+				<script src="../plugins/jquery-master/jquery-confirm.js"></script>
+				<div class="modalboxDemo">
+					<span class="btn btn-sure" id="sure">确定</span>
+					<hr />
+					<button class="btn btn-sure" id="confirm">确定,取消,其他</button>
+					<hr />
+					<span class="btn btn-sure" id="minput">输入密码</span>
+				</div>
+
+				<script type="text/javascript">
+					$('#sure').click(function() {
+						$.alert({
+							title: '提示信息',
+							content: '该数据已存在',
+							icon: 'fa fa-warning',
+							animateFromElement: false,
+							content: '该数据已存在',
+							buttons: {
+								confirm: {
+									text: "确定",
+									btnClass: 'btn-sure',
+									keys: ['enter'],
+									action: function() {
+										$.alert("你点击了确认按钮！")
+
+									}
+								}
+							}
+						});
+					})
+					//确定取消
+					$('#confirm').click(function() {
+						$.confirm({
+							title: '提示信息',
+							content: '您真的确定要删除这条信息吗?',
+							icon: 'fa fa-warning',
+							animateFromElement: false,
+							buttons: {
+								confirm: {
+									text: "确定",
+									btnClass: 'btn-sure',
+									keys: ['enter'],
+									animation: 'zoom',
+									action: function() {
+										$.alert("你点击了确认按钮！")
+
+									}
+								},
+								cancel: {
+									text: "取消",
+									btnClass: 'btn-cancel',
+									keys: ['esc'],
+									action: function() {
+										$.alert("你点击了取消按钮！")
+									}
+								},
+								somethingElse: {
+									text: '其他',
+									btnClass: 'btn-danger',
+									keys: ['enter', 'shift'],
+									action: function() {
+										$.alert('你点了其他');
+									}
+								}
+							}
+						});
+					})
+
+					//请输入类型
+					$('#minput').click(function() {
+						$.confirm({
+							title: '请输入密码',
+							animation: 'scale',
+							animateFromElement: false,
+							content: '' +
+								'<form action="" class="formName">' +
+								'<div class="form-group">' +
+								'<input type="text" placeholder="请输入密码" class="name form-control" required />' +
+								'</div>' +
+								'</form>',
+							buttons: {
+								formSubmit: {
+									text: "确定",
+									btnClass: 'btn-sure',
+									action: function() {
+										var name = this.$content.find('.name').val();
+										if(!name) {
+											$.alert('您输入的密码是' + name);
+											return false;
+										}
+										$.alert('修改成功' + name);
+									}
+								},
+								cancel: {
+									text: "取消",
+									btnClass: 'btn-cancel',
+									keys: ['esc'],
+									action: function() {
+										$.alert("你点击了取消按钮！")
+									}
+								},
+							}
+							//					,
+							//					onContentReady: function() {
+							//						// bind to events
+							//						var jc = this;
+							//						this.$content.find('form').on('submit', function(e) {
+							//							// if the user submits the form by pressing enter in the field.
+							//							e.preventDefault();
+							//							jc.$$formSubmit.trigger('click'); // reference the button and click it
+							//						});
+							//					}
+						});
+					})
+				</script>
+			</xmp>
+		</div>
+
+	</body>
+
+</html>

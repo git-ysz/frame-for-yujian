@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="tabledemo">
+			<h1>
+			 	<span class="span-tdname">按钮组&emsp;<a onclick="history.go(-1)" href="javascript:void(0);">返回上级</a></span>
+			 </h1>
+		</div>
+
+		<h5 class="demo-notice">
+			按钮组 ：.btn-lg、.btn-sm 或 .btn-xs 就可以获得不同尺寸的按钮 。固定宽高:33像素高、120像素宽，超出部分省略号 btb-fx
+		</h5>
+
+		<div class="btn-demo">
+			<span>小号</span>
+			<button class="btn btn-xs btn-sure">确定</button>
+			<button class="btn btn-xs btn-cancel">取消</button>
+			<button class="btn btn-xs btn-danger">危险</button>
+			<button class="btn btn-xs btn-success">成功</button>
+			<button class="btn btn-xs btn-info">信息</button>
+			<button class="btn btn-xs btn-warning">警告</button>
+			<button class="btn btn-xs btn-ordinary">普通</button>
+			<hr/>
+			<span>小号带图标</span>
+			<button class="btn btn-xs btn-sure"><i class="fa fa-fw fa-check"></i>确定</button>
+			<button class="btn btn-xs btn-cancel"><i class="fa fa-fw fa-times"></i>取消</button>
+			<button class="btn btn-xs btn-danger"><i class="fa fa-fw fa-exclamation-triangle"></i>危险</button>
+			<button class="btn btn-xs btn-success"><i class="fa fa-fw fa-smile-o"></i>成功</button>
+			<button class="btn btn-xs btn-info"><i class="fa fa-fw fa-envelope-o"></i>信息</button>
+			<button class="btn btn-xs btn-warning"><i class="fa fa-fw fa-info"></i>警告</button>
+			<button class="btn btn-xs btn-ordinary">普通</button>
+			<hr/>
+			<span>增删改查图标</span>
+			<button class="btn btn-xs btn-sure"><i class="fa fa-fw fa-plus-circle"></i>增加</button>
+			<button class="btn btn-xs btn-cancel"><i class="fa fa-fw fa-times"></i>删除</button>
+			<button class="btn btn-xs btn-danger"><i class="fa fa-fw fa-edit"></i>修改</button>
+			<button class="btn btn-xs btn-info"><i class="fa fa-fw fa-book"></i>查看</button>
+			<button class="btn btn-xs btn-success"><i class="fa fa-fw fa-search"></i>查询</button>
+			<hr/>
+			<span>中号默认</span>
+			<button class="btn btn-sure">确定</button>
+			<button class="btn btn-cancel">取消</button>
+			<button class="btn btn-danger">危险</button>
+			<button class="btn btn-success">成功</button>
+			<button class="btn btn-info">信息</button>
+			<button class="btn btn-warning">警告</button>
+			<button class="btn btn-ordinary">普通</button>
+			<hr/>
+			<span>大号</span>
+			<button class="btn btn-lg btn-sure">确定</button>
+			<button class="btn btn-lg btn-cancel">取消</button>
+			<button class="btn btn-lg btn-danger">危险</button>
+			<button class="btn btn-lg btn-success">成功</button>
+			<button class="btn btn-lg btn-info">信息</button>
+			<button class="btn btn-lg btn-warning">警告</button>
+			<button class="btn btn-lg btn-ordinary">普通</button>
+			<hr/>
+			<span>固定</span>
+			<button class="btn btn-fx btn-sure">确定</button>
+			<button class="btn btn-fx btn-cancel">取消</button>
+			<button class="btn btn-fx btn-danger">危险</button>
+			<button class="btn btn-fx btn-success">成功</button>
+			<button class="btn btn-fx btn-info">信息</button>
+			<button class="btn btn-fx btn-warning">警告</button>
+			<button class="btn btn-fx btn-ordinary">普通</button>
+		</div>
+
+		<div class="code">
+			<xmp>
+				<span>小号</span>
+				<button class="btn btn-xs btn-sure">确定</button>
+				<button class="btn btn-xs btn-cancel">取消</button>
+				<button class="btn btn-xs btn-danger">危险</button>
+				<button class="btn btn-xs btn-success">成功</button>
+				<button class="btn btn-xs btn-info">信息</button>
+				<button class="btn btn-xs btn-warning">警告</button>
+				<button class="btn btn-xs btn-ordinary">普通</button>
+				<hr/>
+				<span>小号带图标</span>
+				<button class="btn btn-xs btn-sure"><i class="fa fa-fw fa-check"></i>确定</button>
+				<button class="btn btn-xs btn-cancel"><i class="fa fa-fw fa-times"></i>取消</button>
+				<button class="btn btn-xs btn-danger"><i class="fa fa-fw fa-exclamation-triangle"></i>危险</button>
+				<button class="btn btn-xs btn-success"><i class="fa fa-fw fa-smile-o"></i>成功</button>
+				<button class="btn btn-xs btn-info"><i class="fa fa-fw fa-envelope-o"></i>信息</button>
+				<button class="btn btn-xs btn-warning"><i class="fa fa-fw fa-info"></i>警告</button>
+				<button class="btn btn-xs btn-ordinary">普通</button>
+				<hr/>
+				<span>增删改查图标</span>
+				<button class="btn btn-xs btn-sure"><i class="fa fa-fw fa-plus-circle"></i>增加</button>
+				<button class="btn btn-xs btn-cancel"><i class="fa fa-fw fa-times"></i>删除</button>
+				<button class="btn btn-xs btn-danger"><i class="fa fa-fw fa-edit"></i>修改</button>
+				<button class="btn btn-xs btn-info"><i class="fa fa-fw fa-book"></i>查看</button>
+				<button class="btn btn-xs btn-success"><i class="fa fa-fw fa-search"></i>查询</button>
+				<hr/>
+				<span>中号默认</span>
+				<button class="btn btn-sure">确定</button>
+				<button class="btn btn-cancel">取消</button>
+				<button class="btn btn-danger">危险</button>
+				<button class="btn btn-success">成功</button>
+				<button class="btn btn-info">信息</button>
+				<button class="btn btn-warning">警告</button>
+				<button class="btn btn-ordinary">普通</button>
+				<hr/>
+				<span>大号</span>
+				<button class="btn btn-lg btn-sure">确定</button>
+				<button class="btn btn-lg btn-cancel">取消</button>
+				<button class="btn btn-lg btn-danger">危险</button>
+				<button class="btn btn-lg btn-success">成功</button>
+				<button class="btn btn-lg btn-info">信息</button>
+				<button class="btn btn-lg btn-warning">警告</button>
+				<button class="btn btn-lg btn-ordinary">普通</button>
+				<hr/>
+				<span>固定</span>
+				<button class="btn btn-fx btn-sure">确定</button>
+				<button class="btn btn-fx btn-cancel">取消</button>
+				<button class="btn btn-fx btn-danger">危险</button>
+				<button class="btn btn-fx btn-success">成功</button>
+				<button class="btn btn-fx btn-info">信息</button>
+				<button class="btn btn-fx btn-warning">警告</button>
+				<button class="btn btn-fx btn-ordinary">普通</button>
+			</xmp>
+		</div>
+
+		<script type="text/javascript">
+		</script>
+	</body>
+
+</html>

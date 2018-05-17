@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="tabledemo">
+			<h1>
+			 	<span class="span-tdname">开关组合&emsp;<a onclick="history.go(-1)" href="javascript:void(0);">返回上级</a></span>
+			 </h1>
+		</div>
+
+		<h5 class="demo-notice">
+			开关组合
+		</h5>
+
+		<div class="btn-demo">
+			<div class="form-switchGroup">
+				<span class="switch-Name"><i class="asterisk">*</i>状态开关</span>
+				<div class="form-switchWrap">
+					<div class="form-switchInner">
+						<div class="form-switchMain">
+							<div class="form-switchAuto">
+								<span class="switchOn">开启</span>
+								<strong></strong>
+								<span class="switchOff">关闭</span>
+							</div>
+						</div>
+					</div>
+					<strong> <label class="error">验证信息不能为空</label> </strong>
+				</div>
+			</div>
+		</div>
+
+		<div class="code">
+			<xmp>
+				<div class="form-switchGroup">
+					<span class="switch-Name"><i class="asterisk">*</i>状态开关</span>
+					<div class="form-switchWrap">
+						<div class="form-switchInner">
+							<div class="form-switchMain">
+								<div class="form-switchAuto">
+									<span class="switchOn">开启</span>
+									<strong></strong>
+									<span class="switchOff">关闭</span>
+								</div>
+							</div>
+						</div>
+						<strong> <label class="error">验证信息不能为空</label> </strong>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$('.form-switchAuto').click(function() {
+						if(!$(this).hasClass('switch-drive')) {
+							$(this).addClass('switch-drive');
+						} else {
+							$(this).removeClass('switch-drive');
+						}
+					})
+				</script>
+			</xmp>
+		</div>
+
+		<script type="text/javascript">
+			$('.form-switchAuto').click(function() {
+				if(!$(this).hasClass('switch-drive')) {
+					$(this).addClass('switch-drive');
+				} else {
+					$(this).removeClass('switch-drive');
+				}
+			})
+		</script>
+	</body>
+
+</html>

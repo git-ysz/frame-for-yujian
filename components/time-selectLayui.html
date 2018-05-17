@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--时间选择器-->
+		<script src="../plugins/layDate-v5.0.85/layDate-v5.0.85/laydate/laydate.js"></script>
+
+		<!--[if lt IE 9]>
+  		<script src="./js/html5shiv.min.js"></script>
+  		<script src="./js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+
+	<body>
+		<div class="info2">
+			<table class="table">
+				<thead>
+					<tr>
+						<th colspan="2"><span class="span-tdname">时间选择器&emsp;<a onclick="history.go(-1)" href="javascript:void(0);">返回上级</a></span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="example">
+								<h5>时间选择器，.focus-border这个类>> <a href="http://www.layui.com/laydate/?alone">时间选择器Layui API点我可以去看</a> </h5>
+								<div class="form-inputGroup clearfix">
+									<span class="input-name"><i class="asterisk">*</i>请选择时间：</span>
+									<div class="input-div">
+										<input class="form-inputFixedWidth focus-border time-select" id="timer" placeholder="请选择时间" type="text">
+										<strong>
+											<label class="error">请选择时间</label>
+										</strong>
+									</div>
+								</div>
+								<div class="code">
+									<xmp>
+										<script src="../plugins/layDate-v5.0.85/layDate-v5.0.85/laydate/laydate.js"></script>
+										<div class="form-inputGroup clearfix">
+											<span class="input-name"><i class="asterisk">*</i>请选择时间：</span>
+											<div class="input-div">
+												<input class="form-inputFixedWidth focus-border time-select" id="timer" placeholder="请选择时间" type="text">
+												<strong>
+											<label class="error">请选择时间</label>
+										</strong>
+											</div>
+										</div>
+										<script type="text/javascript">
+											//自定义颜色
+											laydate.render({
+												elem: '#timer',
+												theme: '#393D49'
+											});
+										</script>
+									</xmp>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script type="text/javascript">
+			//自定义颜色
+			laydate.render({
+				elem: '#timer',
+				theme: '#393D49'
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,134 @@
+// 左侧导航行高
+.ulliheight {
+    line-height: 40px;
+}
+
+// 鼠标放置高亮显示
+.backgroundhover05 {
+    &:hover {
+        transition: background-color 300ms;
+        background: @background02*1.1;
+        color: #fff;
+    }
+}
+
+//后台框架基础布局
+@layheight: 50px;
+@laywidth: 180px;
+.topMain {
+    overflow: hidden;   
+    position: absolute;
+    height: @layheight;
+    top: 0;
+    width: 100%;
+    background: @background06;
+    h1 {
+        float: left;
+        padding: 0 15px;
+        height: 100%;
+        width: auto;
+        display: block;
+        a {
+            height: 100%;
+            width: auto;
+            display: block;
+            img {
+                display: block;
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+    .btnGroup {
+        float: right;
+        font-size: 0;
+        height: @layheight;
+        line-height: @layheight;
+        padding: 0 10px;
+        a {
+            text-align: right;
+            display: inline-block;
+            font-size: 12px;
+            padding: 0 10px;
+            color: #fff;
+            .backgroundhover05;
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.leftMain {
+    position: absolute;
+    overflow: hidden;
+    top: @layheight;
+    width: @laywidth;
+    left: 0;
+    bottom: 0;
+    background: @background04;
+    .outerlayer {
+        i {
+            margin-right: 15px;
+        }
+        >li>span {
+            .ulliheight;
+            display: block;
+            background: @background03*0.9%;
+            padding-left: 15px;
+            cursor: pointer;
+            color: #fff;
+            &:hover {
+                background: @background02;
+            }
+        }
+        .onli {
+            span {
+                background: @background02;
+            }
+            .innerlayer {
+                display: block;
+            }
+        }
+        .innerlayer {
+            display: none;
+            li {
+                a {
+                    .ulliheight;
+                    background: @background03*0.6%;
+                    color: #fff;
+                    display: block;
+                    padding-left: 10px;
+                    font-size: 12px;
+                    border-left: 5px solid @background03;
+                    &:hover {
+                        background: @background03;
+                        padding-left: 10px;
+                        border-left: 5px solid @background02*0.9%;
+                        transition: background-color 300ms;
+                    }
+                    i{
+                        margin-right: 18px;
+                    }
+                }
+            }
+            .onaLink {
+                a {
+                    background: @background03;
+                    padding-left: 10px;
+                    color: #fff;
+                    border-left: 5px solid @background02*0.7%;
+                }
+            }
+        }
+    }
+}
+
+.rightMain {
+    position: absolute;
+    overflow: hidden;    
+    top: @layheight;
+    left: @laywidth;
+    right: 0;
+    bottom: 0;
+}

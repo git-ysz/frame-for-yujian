@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<link href="../plugins/jquery-master/jquery-confirm.css" rel="stylesheet">
+		<script src="../plugins/jquery-master/jquery-confirm.js"></script>
+
+		<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="pd20">
+			<div class="tipBox mr-b15">
+				<span class="crumbsNavB"><a href="">主页</a><a href="">css3伪类休息</a></span>
+			</div>
+
+			<div class="mr-b15 pd5 clearfix border01">
+				<div class="pull-left clearfix">
+					<input class="inputFxheight pull-left" placeholder="请输入标题" type="text">
+					<button class="btn btn-fx btn-sure pull-left"><i class="fa fa-fw fa-search"></i>搜索</button>
+				</div>
+				<div class="paginglist pull-right"> <strong>上一页</strong> <span><small>1</small><em>/</em><small>2</small></span> <strong>下一页</strong> <input type="text" />
+					<div>跳转</div>
+				</div>
+			</div>
+
+			<div class="mr-b15">
+				<table class="table table-bordered table-default table-hover">
+					<colgroup>
+						<col width="50" />
+						<col/>
+						<col/>
+						<col width="70"/>
+						<col width="100" />
+						<col width="200" />
+						<col width="130" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>ID </th>
+							<th>广告标题</th>
+							<th>广告位置</th>
+							<th>广告图片</th>
+							<th>状态</th>
+							<th>上架时间</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>12</td>
+							<td>三月份某某广告投放开始</td>
+							<td>栏目页顶部</td>
+							<td>
+								<i class="fa fa-fw fa-image"></i>
+							</td>
+							<td>
+								<div class="form-switchGroup2 mr-t5 mr-b5">
+									<div class="form-switchWrap">
+										<div class="form-switchInner">
+											<div class="form-switchMain">
+												<div class="form-switchAuto"> <span class="switchOn">开启</span> <strong></strong> <span class="switchOff">关闭</span> </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</td>
+							<td>2017-12-7 13:10:10</td>
+							<td>
+								<a class="btn btn-xs btn-danger" href="editColumn.html"><i class="fa fa-fw fa-edit"></i>修改</a>
+								<button class="btn btn-xs btn-cancel delThis"><i class="fa fa-fw fa-times"></i>删除</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="pd5 clearfix border01">
+				<div class="pull-left clearfix">
+					<input class="inputFxheight pull-left" placeholder="请输入标题" type="text">
+					<button class="btn btn-fx btn-sure pull-left"><i class="fa fa-fw fa-search"></i>搜索</button>
+				</div>
+				<div class="paginglist pull-right"> <strong>上一页</strong> <span><small>1</small><em>/</em><small>2</small></span> <strong>下一页</strong> <input type="text" />
+					<div>跳转</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!--模态框-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-default modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">模态框标题</h4> </div>
+					<div class="modal-body">
+						<!--单行文本-->
+						<div class="form-inputGroup form-theme1 clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>单行文本输入：</span>
+							<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border" placeholder="单行文本输入" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--时间选择-->
+						<div class="form-inputGroup form-theme1 clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>请选择时间：</span>
+							<div class="input-div"> <input type="text" class="form-inputFixedWidth focus-border time-select" placeholder="单行文本输入" /> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--范围文本-->
+						<div class="form-inputGroup form-theme1 clearfix mr-b15"> <span class="input-name"><i class="asterisk">*</i>范围文本：</span>
+							<div class="input-div">
+								<div class="form-rangeGroup"> <input type="text" class="form-sizeRange focus-border" placeholder="最小值1" /> <span>-</span> <input type="text" class="form-sizeRange focus-border" placeholder="最大值99" /> </div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--复选按钮-->
+						<div class="form-checkboxGroup form-theme1 clearfix mr-b15"> <span class="checkbox-name"><i class="asterisk">*</i>复选框：</span>
+							<div class="checkbox-div">
+								<div class="checkboxWrap"> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" class="form-checkbox" value="option1">白色 </label> <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" class="form-checkbox" value="option1">黑色 </label> </div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--单行按钮-->
+						<div class="form-radioGroup form-theme1 clearfix mr-b15"> <span class="radio-name"><i class="asterisk">*</i>单选：</span>
+							<div class="radio-div">
+								<div class="radioWrap"> <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" class="form-radio" id="inlineRadio1" value="option1">男 </label> <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" class="form-radio" id="inlineRadio2" value="option2">女 </label> <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" class="form-radio" id="inlineRadio3" value="option3">保密 </label> </div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--图片上传-->
+						<div class="form-imagesGroup form-theme1 clearfix mr-b15"> <span class="images-name"><i class="asterisk">*</i>图片上传：</span>
+							<div class="images-div">
+								<div class="imagesWrap"> <label class="uploadimages"><i class="fa fa-fw fa-image"></i>请上传图片<input type="file" class="form-images"/></label>
+									<div class="imagesList" style="display: none;">
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test16-9.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+										<div class="uploadimg"> <span class="delimg">×</span> <img src="../imgs/test.jpg" alt="" /> </div>
+									</div>
+								</div> <strong> <label class="error">必须上传文件</label> </strong> </div>
+						</div>
+						<!--文件上传-->
+						<div class="form-fileGroup form-theme1 clearfix mr-b15"> <span class="file-name"><i class="asterisk">*</i>文件上传：</span>
+							<div class="file-div">
+								<div class="fileWrap"> <label class="uploadfile"><i class="fa fa-fw fa-file"></i>请选择文件<input type="file" class="form-file"/></label>
+									<div class="uploadFlieList" style="display: none;">
+										<ul>
+											<li> <span class="file-title">2017年1月份电商数据报表.xsl</span> <span class="file-del" data-fileId="1"><i class="fa fa-fw fa-times"></i>删除</span> </li>
+											<li> <span class="file-title">2017年1月份电商数据报表.xsl</span> <span class="file-del" data-fileId="1"><i class="fa fa-fw fa-times"></i>删除</span> </li>
+											<li> <span class="file-title">2017年1月份电商数据报表.xsl</span> <span class="file-del" data-fileId="1"><i class="fa fa-fw fa-times"></i>删除</span> </li>
+										</ul>
+									</div>
+								</div> <strong> <label class="error">必须上传文件</label> </strong> </div>
+						</div>
+						<!--下拉选项-->
+						<div class="form-selectGroup form-theme1 clearfix mr-b15"> <span class="select-name"><i class="asterisk">*</i>下拉选项：</span>
+							<div class="select-div">
+								<div class="selectWrap">
+									<select name="" class="control-select" style="width: 100%;">
+										<option value="">—请选择—</option>
+										<option value="">32GB</option>
+										<option value="">64GB</option>
+										<option value="">128GB</option>
+										<option value="">256GB</option>
+										<option value="">512GB</option>
+										<option value="">1024GB</option>
+									</select>
+								</div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--开关组合-->
+						<div class="form-switchGroup form-theme1 mr-b15"> <span class="switch-Name"><i class="asterisk">*</i>状态开关：</span>
+							<div class="form-switchWrap">
+								<div class="form-switchInner">
+									<div class="form-switchMain">
+										<div class="form-switchAuto"> <span class="switchOn"><i class="fa fa-check"></i></span> <strong></strong> <span class="switchOff"><i class="fa fa-times"></i></span> </div>
+									</div>
+								</div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--多下拉选项-->
+						<div class="form-selectGroup form-theme1 clearfix mr-b15"> <span class="select-name"><i class="asterisk">*</i>多组下拉选项：</span>
+							<div class="select-div">
+								<div class="selectWrap">
+									<select name="" class="control-select">
+										<option value="">—请选择—</option>
+										<option value="">32GB</option>
+										<option value="">64GB</option>
+										<option value="">128GB</option>
+										<option value="">256GB</option>
+										<option value="">512GB</option>
+										<option value="">1024GB</option>
+									</select>
+									<select name="" class="control-select">
+										<option value="">—请选择—</option>
+										<option value="">32GB</option>
+										<option value="">64GB</option>
+										<option value="">128GB</option>
+										<option value="">256GB</option>
+										<option value="">512GB</option>
+										<option value="">1024GB</option>
+									</select>
+									<select name="" class="control-select">
+										<option value="">—请选择—</option>
+										<option value="">32GB</option>
+										<option value="">64GB</option>
+										<option value="">128GB</option>
+										<option value="">256GB</option>
+										<option value="">512GB</option>
+										<option value="">1024GB</option>
+									</select>
+								</div> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--文本域-->
+						<div class="form-textareaGroup form-theme1 clearfix mr-b15"> <span class="textarea-name"><i class="asterisk">*</i>短文本域：</span>
+							<div class="textarea-div"> <textarea class="form-textareaFixedWidth focus-border" placeholder="请输入内容"></textarea> <strong> <label class="error">验证信息不能为空</label> </strong> </div>
+						</div>
+						<!--超长文本域-->
+						<div class="form-longTextarea mr-b15">
+							<div class="longTexttitle">文本表头</div> <textarea name="" rows="" cols=""></textarea>
+							<div class="textChecking">文本验证</div>
+						</div>
+					</div>
+					<div class="modal-footer"> <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button> <button type="button" class="btn btn-sure">确定</button> </div>
+				</div>
+			</div>
+		</div>
+		<!--模态框-->
+		<script type="text/javascript">
+			$('.delThis').click(function() {
+				$.confirm({
+					title: '提示信息',
+					content: '您真的确定要删除这条信息吗?',
+					icon: 'fa fa-warning',
+					animateFromElement: false,
+					buttons: {
+						confirm: {
+							text: "确定",
+							btnClass: 'btn-sure',
+							keys: ['enter'],
+							animation: 'zoom',
+							action: function() {
+								$.alert("你点击了确认按钮！")
+							}
+						},
+						cancel: {
+							text: "取消",
+							btnClass: 'btn-cancel',
+							keys: ['esc'],
+							action: function() {
+								$.alert("你点击了取消按钮！")
+							}
+						}
+					}
+				});
+			})
+			$('.form-switchAuto').click(function() {
+				if(!$(this).hasClass('switch-drive')) {
+					$(this).addClass('switch-drive');
+				} else {
+					$(this).removeClass('switch-drive');
+				}
+			})
+
+			$('.time-select').focus(function() {
+				laydate({
+					istime: true,
+					format: 'YYYY-MM-DD hh:mm:ss'
+				});
+			})
+
+			$('.addThis').click(function() {
+				$('#myModal').modal('show');
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<link href="../plugins/jquery-master/jquery-confirm.css" rel="stylesheet">
+		<script src="../plugins/jquery-master/jquery-confirm.js"></script>
+
+		<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="pd20">
+			<div class="tipBox mr-b15">
+				<span class="crumbsNavB"><a href="">主页</a><a href="">css3伪类休息</a></span>
+			</div>
+
+			<div class="mr-b15 pd5 clearfix border01">
+				<div class="pull-right">
+					<span class="btn btn-sure readRole">创建角色</span>
+				</div>
+
+				<div class="paginglist pull-left"> <strong>上一页</strong> <span><small>1</small><em>/</em><small>2</small></span> <strong>下一页</strong> <input type="text" />
+					<div>跳转</div>
+				</div>
+			</div>
+
+			<div class="mr-b15">
+				<table class="table table-bordered table-default table-hover">
+					<colgroup>
+						<col width="50" />
+						<col width="150" />
+						<col width="150" />
+						<col />
+						<col width="170" />
+						<col width="150" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>ID </th>
+							<th>角色名称</th>
+							<th>角色简称</th>
+							<th>角色描述</th>
+							<th>管理操作</th>
+							<th>目录权限个数</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>21</td>
+							<td>财务</td>
+							<td>财务</td>
+							<td>系统当中处理金钱相关的角色</td>
+							<td>
+								<a href="createRole.html" class="btn btn-xs btn-sure"><i class="fa fa-fw fa-wrench"></i>权限</a>
+								<span class="btn btn-xs btn-warning readRole"><i class="fa fa-fw fa-user"></i>角色</span>
+								<button class="btn btn-xs btn-cancel delThis"><i class="fa fa-fw fa-times"></i>删除</button>
+							</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="pd5 clearfix border01">
+				<div class="pull-right">
+					<span class="btn btn-sure readRole">创建角色</span>
+				</div>
+				<div class="paginglist pull-left"> <strong>上一页</strong> <span><small>1</small><em>/</em><small>2</small></span> <strong>下一页</strong> <input type="text" />
+					<div>跳转</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!--模态框-->
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-default" style="width: 800px;" role="document">
+				<div class="modal-content">
+					<div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">模态框标题</h4> </div>
+					<div class="modal-body">
+						<div class="form-inputGroup clearfix mr-b15">
+							<span class="input-name"><i class="asterisk">*</i>角色名称：</span>
+							<div class="input-div">
+								<input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入角色名称" />
+								<strong>
+									<label class="error">验证信息不能为空</label>
+								</strong>
+							</div>
+						</div>
+						<div class="form-inputGroup clearfix mr-b15">
+							<span class="input-name"><i class="asterisk">*</i>角色简称：</span>
+							<div class="input-div">
+								<input type="text" class="form-inputFixedWidth focus-border" placeholder="请输入角色简称" />
+								<strong>
+									<label class="error">验证信息不能为空</label>
+								</strong>
+							</div>
+						</div>
+
+						<div class="form-textareaGroup clearfix mr-b15"> 
+							<span class="textarea-name"><i class="asterisk">*</i>角色描述：</span>
+							<div class="textarea-div">
+								<textarea class="form-textareaFixedWidth focus-border" placeholder="请输入角色描述"></textarea>
+								<strong> <label class="error">验证信息不能为空</label> </strong> 
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-sure">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">返回</button></div>
+				</div>
+			</div>
+		</div>
+		<!--模态框-->
+		<script type="text/javascript">
+			$('.delThis').click(function() {
+				$.confirm({
+					title: '提示信息',
+					content: '您真的确定要删除这条信息吗?',
+					icon: 'fa fa-warning',
+					animateFromElement: false,
+					buttons: {
+						confirm: {
+							text: "确定",
+							btnClass: 'btn-sure',
+							keys: ['enter'],
+							animation: 'zoom',
+							action: function() {
+								$.alert("你点击了确认按钮！")
+							}
+						},
+						cancel: {
+							text: "取消",
+							btnClass: 'btn-cancel',
+							keys: ['esc'],
+							action: function() {
+								$.alert("你点击了取消按钮！")
+							}
+						}
+					}
+				});
+			})
+
+			$('.readRole').click(function() {
+				$('#myModal2').modal('show');
+			})
+		</script>
+	</body>
+
+</html>

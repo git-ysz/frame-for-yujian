@@ -1,0 +1,1814 @@
+//二次开发的预定义全局样式
+// 文本溢出省略号标识
+.text-ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 不可选中，用在active里
+.userSelect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+//border
+.border01 {
+    border: 1px solid @predefinedBorder01;
+}
+
+.tipBox {
+    border: 1px solid @predefinedBorder01;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    background: linear-gradient(to bottom, @predefinedBg02 0%, @predefinedBg03 100%);
+}
+
+// 内外边距 5px 等分 ,宽度
+.marpad(@n) when (@n > 0) {
+    .marpad((@n - 1));
+    @m: (@n*5);
+    .pd-l@{m} {
+        padding-left: (5px * @n);
+    }
+    .pd-r@{m} {
+        padding-right: (5px * @n);
+    }
+    .pd-b@{m} {
+        padding-bottom: (5px * @n);
+    }
+    .pd-t@{m} {
+        padding-top: (5px * @n);
+    }
+    .mr-l@{m} {
+        margin-left: (5px * @n);
+    }
+    .mr-r@{m} {
+        margin-right: (5px * @n);
+    }
+    .mr-b@{m} {
+        margin-bottom: (5px * @n);
+    }
+    .mr-t@{m} {
+        margin-top: (5px * @n);
+    }
+    .pd@{m} {
+        padding: (5px * @n);
+    }
+    .mr@{m} {
+        margin: (5px * @n);
+    }
+}
+
+.marpad(10);
+// 按钮，确定、取消、禁用
+.btn {
+    border: none;
+}
+
+// 确定
+.btn.btn-sure {
+    //小渐变橙色
+    background: linear-gradient(to bottom, @background07*1.2 0%, @background07*0.95 100%) repeat scroll 0 0;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: #fff;
+    }
+}
+
+// 取消
+.btn.btn-cancel {
+    //小渐变浅灰
+    background: linear-gradient(to bottom, #e4e4e4 0%, #cccccc 100%) !important;
+    color: #333;
+    border: none;
+    font-size: 12px;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: #333;
+    }
+}
+
+// 禁用
+.btn-disable {
+    background: @predefinedBg02;
+    color: #333;
+    cursor: no-drop;
+    border: none;
+    font-size: 12px;
+    &:active {
+        box-shadow: none;
+    }
+}
+
+// 普通按钮
+.btn.btn-ordinary {
+    background: #ccc;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: #fff;
+    }
+}
+
+// 固定高度按钮
+.btn.btn-fx {
+    .hHeight;
+    padding: 0 20px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 高度行高33px,无上下边距,左右10内边距
+.height35px {
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+}
+
+// 分割线
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid @predefinedBorder01;
+    margin: 1em 0;
+    padding: 0;
+}
+
+// cur 鼠标小手
+.cur {
+    cursor: pointer;
+}
+
+// 获取焦点颜色
+.focus-border {
+    &:focus {
+        transition: all 300ms;
+        border: 1px solid @predefinedBorder02!important;
+    }
+}
+
+// 星号必填项*
+.asterisk {
+    color: @verfontColor;
+    font-style: normal;
+    padding-right: 5px;
+}
+
+// 单行文本
+.text-single {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.control-name {
+    // 控制表单标题宽度
+    width: 120px;
+}
+
+.control-marginleft {
+    // 控制左外边距
+    margin-left: 120px;
+}
+
+.control-divwidth {
+    // 控制表单input宽度
+    width: 450px!important;
+}
+
+.validationWidth {
+    // 表单验证容器最大宽度
+    max-width: 320px;
+}
+
+.hHeight {
+    // 行高高度
+    height: 30px;
+    line-height: 30px;
+}
+
+.validationWrap {
+    >strong {
+        .validationWidth;
+        .hHeight;
+        .text-ellipsis;
+        float: left;
+        display: block;
+        font-size: 12px;
+        font-weight: normal;
+        margin: 0;
+        padding: 0 0 0 10px;
+        color: @verfontColor;
+        font-weight: normal;
+        //加上这个两个元素，验证信息下移到表单下方
+        //      clear: both;
+        //      padding: 0;
+        >label {
+            font-weight: normal;
+            margin: 0;
+        }
+    }
+}
+
+// input组
+.nameFxheight {
+    .hHeight;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.inputFxheight {
+    .hHeight;
+    padding: 0 5px;
+    border: 1px solid @predefinedBorder01;
+    min-width: 250px;
+    max-width: 500px;
+}
+
+.selectFxheight {
+    .hHeight;
+    padding: 0 5px;
+    border: 1px solid @predefinedBorder01;
+}
+
+//不含带边框的input
+.label {
+    &-input-noborder {
+        height: 23px;
+        line-height: 23px;
+        display: block;
+        margin: 5px 0;
+        input {
+            height: 23px;
+            line-height: 23px;
+            display: block;
+            border: none;
+            width: 100%;
+        }
+    }
+    &-selecter {
+        height: 23px;
+        line-height: 23px;
+        display: block;
+        margin: 5px 0;
+        select {
+            height: 23px;
+            line-height: 23px!important;
+            display: block;
+            border: 1px solid @predefinedBorder01;
+            font-weight: normal;
+            option {
+                height: 23px;
+                line-height: 23px;
+            }
+        }
+    }
+    &-radioer {
+        height: 23px;
+        line-height: 23px;
+        display: block;
+        margin: 5px 0;
+        overflow: hidden;
+        label {
+            display: block;
+            float: left;
+            height: 23px;
+            line-height: 23px;
+            font-weight: normal;
+            margin-right: 10px;
+            strong {
+                font-weight: normal;
+                float: left;
+            }
+            input {
+                float: left;
+                margin-right: 5px;
+            }
+        }
+    }
+    &-checkboxer {
+        height: 23px;
+        line-height: 23px;
+        display: block;
+        margin: 5px 0;
+        overflow: hidden;
+        label {
+            display: block;
+            float: left;
+            height: 23px;
+            line-height: 23px;
+            font-weight: normal;
+            margin-right: 10px;
+            strong {
+                font-weight: normal;
+                float: left;
+            }
+            input {
+                margin-right: 5px;
+                float: left;
+            }
+        }
+    }
+}
+
+// 带前置标题的input组
+.form-inputGroup {
+    .input-name {
+        .control-name;
+        .hHeight;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .input-div {
+        .control-marginleft;
+        overflow: hidden;
+        input {
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            display: block;
+            padding: 0 5px;
+            border: 1px solid @predefinedBorder01;
+            .hHeight;
+        }
+        .form-inputFull {
+            width: 100%!important;
+        }
+        .form-inputFixedWidth {
+            .control-divwidth;
+            float: left;
+        }
+        .form-rangeGroup {
+            .control-divwidth;
+            float: left;
+            .form-sizeRange {
+                float: left;
+            }
+            >span {
+                float: left;
+                padding: 0 5px;
+                font-family: simsun;
+                .hHeight;
+            }
+        }
+        .validationWrap;
+    }
+}
+
+// 带前置标题的textarea组
+.form-textareaGroup {
+    .textarea-name {
+        .control-name;
+        .hHeight;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .textarea-div {
+        .control-marginleft;
+        overflow: hidden;
+        .form-textareaFull {
+            width: 100%;
+            display: block;
+            padding: 5px;
+            min-height: 75px;
+            font-size: 12px;
+            border: 1px solid @predefinedBorder01;
+        }
+        .form-textareaFixedWidth {
+            .control-divwidth;
+            float: left;
+            display: block;
+            padding: 5px;
+            min-height: 75px;
+            font-size: 12px;
+            border: 1px solid @predefinedBorder01;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        }
+        .validationWrap;
+    }
+}
+
+// textarea不含标题
+.textareaFxwh {
+    border: 1px solid @predefinedBorder01;
+    padding: 5px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+// 超长文本域
+.form-longTextarea {
+    .longTexttitle {
+        display: block;
+        padding: 0 5px;
+        border: 1px solid @predefinedBorder01;
+        background: linear-gradient(to bottom, @predefinedBg02 0%, @predefinedBg03 100%);
+        font-size: 12px;
+        .hHeight;
+    }
+    textarea {
+        border: 1px solid @predefinedBorder01;
+        width: 100%;
+        display: block;
+        min-height: 120px;
+        border-top: none;
+        padding: 5px;
+        resize: none;
+        border-bottom: none;
+    }
+    .textChecking {
+        text-align: right;
+        display: block;
+        padding: 0 5px;
+        border: 1px solid @predefinedBorder01;
+        background: @predefinedBg02;
+        font-size: 12px;
+        .hHeight;
+    }
+}
+
+// 带前置标题的checkbox组
+.form-checkboxGroup {
+    .checkbox-name {
+        .control-name;
+        .hHeight;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .checkbox-div {
+        overflow: hidden;
+        .control-marginleft;
+        //label存放在cheboxWrap容器中,否则验证容器会漂
+        .checkboxWrap {
+            .control-divwidth;
+            float: left;
+            >label {
+                .hHeight;
+                margin-left: 0;
+                margin-right: 10px;
+                float: left;
+                font-size: 12px;
+                .form-checkbox {
+                    margin-top: 9px;
+                }
+            }
+        }
+        .validationWrap;
+    }
+}
+
+// 带前置标题的select 组
+.form-selectGroup {
+    .select-name {
+        .control-name;
+        .hHeight;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .select-div {
+        .control-marginleft;
+        overflow: hidden;
+        .selectWrap {
+            .control-divwidth;
+            float: left;
+            select {
+                .hHeight;
+                border: 1px solid @predefinedBorder01;
+                margin-left: 0;
+                margin-right: 10px;
+                float: left;
+                font-size: 12px;
+                color: #666;
+            }
+        }
+        .validationWrap;
+    }
+}
+
+// 带前置标题的radio组
+.form-radioGroup {
+    .radio-name {
+        .control-name;
+        .hHeight;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .radio-div {
+        .control-marginleft;
+        overflow: hidden;
+        .radioWrap {
+            .control-divwidth;
+            float: left;
+            >label {
+                .hHeight;
+                margin-left: 0;
+                margin-right: 10px;
+                float: left;
+                font-size: 12px;
+                .form-radio {
+                    margin-top: 9px;
+                }
+            }
+        }
+        .validationWrap;
+    }
+}
+
+// 带前置标题的file组
+.form-fileGroup {
+    .file-name {
+        .control-name;
+        .hHeight;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .file-div {
+        .control-marginleft;
+        overflow: hidden;
+        .fileWrap {
+            .control-divwidth;
+            float: left;
+            .form-file {
+                display: none;
+            }
+            .uploadfile {
+                .hHeight;
+                .userSelect;
+                clear: both;
+                border: 1px solid @predefinedBorder01;
+                background: @predefinedBg02;
+                display: block;
+                margin: 0;
+                width: 150px;
+                cursor: pointer;
+                font-size: 12px;
+                text-align: center;
+                font-weight: normal!important;
+                i {
+                    margin-right: 5px;
+                }
+                &:active {
+                    .userSelect;
+                    background: @predefinedBg01;
+                }
+            }
+            .uploadFlieList {
+                ul {
+                    li {
+                        overflow: hidden;
+                        height: 33px;
+                        line-height: 33px;
+                        border-bottom: 1px dotted @predefinedBorder01;
+                        .file-title {
+                            .text-ellipsis;
+                            width: 350px;
+                            float: left;
+                            font-size: 12px;
+                        }
+                        .file-del {
+                            color: #999;
+                            font-size: 12px;
+                            cursor: pointer;
+                            float: right;
+                            &:active {
+                                .userSelect;
+                                color: @fontcolor02;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .validationWrap;
+    }
+}
+
+// 带前置标题的图片上传
+.form-imagesGroup {
+    .images-name {
+        .control-name;
+        .hHeight;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .images-div {
+        .control-marginleft;
+        overflow: hidden;
+        .imagesWrap {
+            .control-divwidth;
+            float: left;
+            .uploadimages {
+                .hHeight;
+                clear: both;
+                border: 1px solid @predefinedBorder01;
+                background: @predefinedBg02;
+                display: block;
+                margin: 0;
+                width: 150px;
+                cursor: pointer;
+                font-size: 12px;
+                text-align: center;
+                .userSelect;
+                font-weight: normal!important;
+                i {
+                    margin-right: 5px;
+                }
+                &:active {
+                    .userSelect;
+                    background: @predefinedBg01;
+                }
+                .form-images {
+                    display: none;
+                }
+            }
+            .imagesList {
+                .uploadimg {
+                    float: left;
+                    width: 120px;
+                    height: 120px;
+                    position: relative;
+                    margin: 10px 10px 0 0;
+                    border: 1px dotted @predefinedBorder01;
+                    text-align: center;
+                    padding: 5px;
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        height: 100%;
+                        vertical-align: middle;
+                        width: 0;
+                    }
+                    .delimg {
+                        position: absolute;
+                        right: 5px;
+                        top: 5px;
+                        width: 25px;
+                        height: 25px;
+                        line-height: 25px;
+                        text-align: center;
+                        background: @predefinedBg02;
+                        z-index: 9;
+                        cursor: pointer;
+                        &:hover {
+                            background: @predefinedBg01;
+                        }
+                    }
+                    img {
+                        max-width: 100px;
+                        max-height: 100px;
+                        overflow: hidden;
+                        font-size: 0;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .validationWrap;
+    }
+}
+
+//头带背景
+.form-theme1 {
+    .select-name,
+    .input-name,
+    .checkbox-name,
+    .radio-name,
+    .images-name,
+    .file-name,
+    .switch-Name {
+        background: linear-gradient(to bottom, @predefinedBg02 0%, @predefinedBg03 100%);
+        border: 1px solid @predefinedBorder01;
+        border-right: none;
+    }
+    .checkboxWrap,
+    .radioWrap {
+        border: 1px solid @predefinedBorder01;
+        padding: 0 0 0 10px;
+        height: 30px;
+    }
+    .textarea-name {
+        background: linear-gradient(to bottom, @predefinedBg02 0%, @predefinedBg03 100%);
+        border: 1px solid @predefinedBorder01;
+        border-right: none;
+        min-height: 75px;
+    }
+}
+
+//开关组1
+.form-switchGroup {
+    //按钮宽度
+    overflow: hidden;
+    .switch-Name {
+        .control-name;
+        .hHeight;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .form-switchWrap {
+        .control-marginleft;
+        .hHeight;
+        .userSelect;
+        overflow: hidden;
+        .form-switchInner {
+            .control-divwidth;
+            float: left;
+            overflow: hidden;
+            .form-switchMain {
+                .hHeight;
+                float: left;
+                overflow: hidden;
+                border: 1px solid @predefinedBorder01;
+                width: 80px;
+                cursor: pointer;
+                .form-switchAuto {
+                    width: 130px;
+                    overflow-x: auto;
+                    transition: transform 300ms;
+                    >span {
+                        float: left;
+                        width: 50px;
+                        color: #fff;
+                        background: @predefinedBg02;
+                        font-size: 12px;
+                        text-align: center;
+                        .hHeight;
+                    }
+                    >strong {
+                        float: left;
+                        width: 30px;
+                        border: 5px solid @background07*0.85;
+                        background: @background07;
+                        .hHeight;
+                    }
+                    .switchOn {
+                        background: @background07*1.6;
+                    }
+                    .switchOff {
+                        background: @predefinedBg01;
+                        color: #333;
+                    }
+                }
+                .switch-drive {
+                    transform: translateX(-50px);
+                }
+            }
+        }
+        .validationWrap;
+    }
+}
+
+//开关组2
+.form-switchGroup2 {
+    //按钮宽度
+    .hHeight2 {
+        height: 23px;
+        line-height: 23px;
+    }
+    overflow: hidden;
+    .switch-Name {
+        .control-name;
+        .hHeight2;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .form-switchWrap {
+        .userSelect;
+        overflow: hidden;
+        .form-switchInner {
+            .control-divwidth;
+            float: left;
+            overflow: hidden;
+            .form-switchMain {
+                .hHeight2;
+                float: left;
+                overflow: hidden;
+                border: 1px solid @predefinedBorder01;
+                width: 80px;
+                cursor: pointer;
+                .form-switchAuto {
+                    width: 130px;
+                    overflow-x: auto;
+                    transition: transform 300ms;
+                    >span {
+                        float: left;
+                        width: 50px;
+                        color: #fff;
+                        background: @predefinedBg02;
+                        font-size: 12px;
+                        overflow: hidden;
+                        text-align: center;
+                        display: block;
+                        .hHeight2;
+                    }
+                    >strong {
+                        float: left;
+                        display: block;
+                        width: 30px;
+                        border: 5px solid @background07*0.85;
+                        background: @background07;
+                        .hHeight2;
+                    }
+                    .switchOn {
+                        background: @background07*1.6;
+                    }
+                    .switchOff {
+                        background: @predefinedBg01;
+                        color: #333;
+                    }
+                }
+                .switch-drive {
+                    transform: translateX(-50px);
+                }
+            }
+        }
+        .validationWrap;
+    }
+}
+
+// table组 7px内边距 单行表格，文本溢出后省略号
+.thtdHeight {
+    //表格内边距左右为7 高度固定33px
+    padding: 0 7px;
+    height: 33px;
+    line-height: 33px;
+}
+
+//普通表格
+.table-default {
+    table-layout: fixed;
+    margin-bottom: 0;
+    thead {
+        tr {
+            border-bottom: none;
+            th {
+                .thtdHeight;
+                border-bottom: none;
+                background: linear-gradient(to bottom, @predefinedBg02 0%, @predefinedBg03 100%);
+                font-size: 12px;
+                font-weight: normal;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                .thtdHeight;
+                font-size: 12px;
+                width: 100%;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+//展示型表格
+.table-show {
+    margin-bottom: 0;
+    thead {
+        tr {
+            border-bottom: none;
+            th {
+                border-bottom: none;
+                background: linear-gradient(to bottom, @predefinedBg02 0%, @predefinedBg03 100%);
+                font-size: 12px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+// 固定表格头部，table组 7px内边距 单行表格，文本溢出后省略号 有BUG
+.table-fiexdHead {
+    overflow: hidden;
+    position: relative;
+    .table-fiexdHeader {
+        table {
+            position: relative;
+            margin: 0 0 -1px 0;
+            tr {
+                background: @predefinedBg02;
+                th {
+                    .thtdHeight;
+                    font-size: 12px;
+                    font-weight: normal;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .table-fiexdBody {
+        overflow-y: auto;
+        height: 511px;
+        table {
+            margin: 0;
+            tr {
+                td {
+                    .thtdHeight;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+// 带前置标题的城市选择器
+.form-citySelectGroup {
+    .citySelect-name {
+        .control-name;
+        .hHeight;
+        float: left;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 12px;
+    }
+    .citySelect-div {
+        .control-marginleft;
+        overflow: hidden;
+        .citySelectWrap {
+            .control-divwidth;
+            float: left;
+            .citySelect {
+                .hHeight;
+                border: 1px solid @predefinedBorder01;
+                margin-left: 0;
+                margin-right: 10px;
+                float: left;
+                font-size: 12px;
+                color: #666;
+                width: 100px;
+            }
+        }
+        .validationWrap;
+    }
+}
+
+// 基于bootstrap优化过的模态框
+.modal-default {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    .modal-header {
+        padding: 10px 15px;
+        background: @predefinedBg02;
+        .modal-title {
+            height: 33px;
+            line-height: 33px;
+            font-size: 14px;
+        }
+        .close {
+            height: 33px;
+            width: 33px;
+            line-height: 33px;
+            text-align: center;
+            background: @predefinedBg01;
+            margin-top: 0px;
+            span {
+                display: block;
+                font-size: 22px;
+            }
+        }
+    }
+    .modal-footer {
+        padding: 10px 15px;
+        background: @predefinedBg02;
+    }
+}
+
+// 弹窗
+.bootbox-confirm {
+    .modal-default;
+}
+
+// 选项卡
+.tabGroup {
+    .tabTitle {
+        border: 1px solid @predefinedBorder01;
+        background: linear-gradient(to bottom, @predefinedBg02 0%, @predefinedBg03 100%);
+        span {
+            float: left;
+            height: 33px;
+            line-height: 33px;
+            padding: 0 15px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .onTab {
+            background: #fff;
+            color: @fontcolor02;
+            border-bottom: 3px solid @predefinedBorder02*1.2;
+        }
+    }
+    .tabBody {
+        border: 1px solid @predefinedBorder01;
+        border-top: none;
+        .tabMain {
+            padding: 15px;
+            display: none;
+        }
+        .tabMain.onMain {
+            display: block;
+            font-size: 12px;
+        }
+    }
+}
+
+// 提示条 
+.tip {
+    .twd {
+        height: 35px;
+        line-height: 35px;
+        padding: 0 10px;
+        font-size: 12px;
+        color: #fff;
+        border: 1px dotted @predefinedBorder01;
+    }
+    &-danger {
+        background: rgb(217, 83, 79);
+        .twd;
+    }
+    &-warning {
+        background: rgb(240, 173, 78);
+        .twd;
+    }
+    &-success {
+        background: rgb(92, 184, 92);
+        .twd;
+    }
+    &-info {
+        background: rgb(204, 204, 204);
+        .twd;
+    }
+    &-nothing {
+        background: rgb(254, 251, 220);
+        .twd;
+        color: #333;
+    }
+}
+
+// 分页组A
+.pagingHeight {
+    //分页高度
+    height: 30px;
+    line-height: 30px;
+}
+
+// 分页组B
+.paginglist {
+    .pagingHeight;
+    border-left: 1px solid @predefinedBorder01;
+    border-top: 1px solid @predefinedBorder01;
+    display: inline-block;
+    .br {
+        border-right: 1px solid @predefinedBorder01;
+        border-bottom: 1px solid @predefinedBorder01;
+    }
+    .actvie {
+        &:active {
+            background: @predefinedBg03;
+            color: #333;
+        }
+    }
+    strong {
+        .br;
+        .pagingHeight;
+        .actvie;
+        font-size: 12px;
+        float: left;
+        display: block;
+        padding: 0 10px;
+        font-size: 12px;
+        font-weight: normal;
+        background: @predefinedBg02;
+        cursor: pointer;
+    }
+    .prevIco {
+        &:before {
+            content: '<';
+            font-family: simsun;
+            padding-right: 3px;
+            color: @fontcolor02;
+        }
+    }
+    .nextIco {
+        &:after {
+            content: '>';
+            font-family: simsun;
+            padding-left: 3px;
+            color: @fontcolor02;
+        }
+    }
+    span {
+        .br;
+        .pagingHeight;
+        float: left;
+        display: block;
+        font-size: 12px;
+        padding: 0 7px;
+        small,
+        em {
+            .br;
+            .pagingHeight;
+            font-size: 12px;
+            display: inline-block;
+            padding: 0 3px;
+            border: none;
+        }
+        em {
+            border: none;
+            padding: 0;
+        }
+    }
+    >input {
+        .pagingHeight;
+        .br!important;
+        padding: 0 5px;
+        float: left;
+        display: block;
+        border: none;
+        font-size: 12px;
+        text-align: center;
+        width: 55px;
+    }
+    >div {
+        .pagingHeight;
+        .br;
+        .actvie;
+        float: left;
+        font-size: 12px;
+        padding: 0 7px;
+        background: @predefinedBg02;
+        cursor: pointer;
+    }
+}
+
+//面包屑导航 A类
+.crumbsNavA {
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    font-family: "simsun"; //宋体情况下锯齿小点
+    font-size: 11px;
+    a {
+        font-size: 12px;
+        color: #666;
+        display: inline-block;
+        font-family: "微软雅黑";
+        margin: 0 5px;
+        &:first-child {
+            margin: 0 5px 0 0;
+        }
+    }
+}
+
+//面包屑导航 B类
+.crumbsNavB {
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    font-family: "simsun"; //宋体情况下锯齿小点
+    font-size: 11px;
+    a {
+        font-size: 12px;
+        color: #666;
+        font-family: "微软雅黑";
+        &:after {
+            content: ">";
+            text-align: center;
+            padding: 0 5px;
+            font-family: "simsun"; //宋体情况下锯齿小点
+        }
+    }
+}
+
+//登录模型1
+.login1 {
+    background: radial-gradient(@background07*1.4, @background07*0.95, @background07*1);
+    /* 标准的语法 */
+    overflow: hidden;
+    .loginForm {
+        overflow: hidden;
+        margin: 100px auto 0;
+        position: relative;
+        .logoImg {
+            width: 250px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            text-align: center;
+            margin: 0 0 0 -125px;
+        }
+        .loginInner {
+            width: 350px;
+            margin: 70px auto 15px;
+            background: #fff;
+            background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0 !important;
+            filter: Alpha(opacity=90);
+            box-shadow: 0 0 15px @background07*0.45;
+            .loginHeader {
+                position: relative;
+                height: 50px;
+                line-height: 50px;
+                background: @background07*1.1;
+                padding: 0 15px;
+                font-size: 18px;
+                color: #fff;
+                font-weight: bold;
+                span {
+                    position: absolute;
+                    box-shadow: 0 0 15px @background07*0.7;
+                    right: 0;
+                    top: 0;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 55px;
+                    text-align: center;
+                    background: #fff;
+                    border-radius: 50%;
+                    i {
+                        font-size: 32px;
+                        color: @fontcolor02;
+                    }
+                }
+            }
+            .loginFooter {
+                padding: 15px;
+                button {
+                    display: block;
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #fff;
+                    font-size: 14px!important;
+                    text-align: center;
+                    border: none;
+                    background: #333;
+                }
+            }
+            .loginInput {
+                margin: 15px 15px 0 15px;
+                overflow: hidden;
+                height: 35px;
+                line-height: 35px;
+                label {
+                    width: 80px;
+                    padding-left: 10px;
+                    border: 1px solid @predefinedBorder01;
+                    float: left;
+                    text-align: left;
+                    font-size: 12px;
+                    background: #f2f2f2;
+                    color: #666;
+                    height: 35px;
+                    line-height: 35px;
+                    i {
+                        margin-right: 5px;
+                        font-size: 14px;
+                        color: @fontcolor02;
+                    }
+                }
+                input {
+                    width: 240px;
+                    float: left;
+                    height: 35px;
+                    line-height: 35px;
+                    border: 1px solid @predefinedBorder01;
+                    border-left: none;
+                    padding: 0 5px;
+                }
+            }
+            .yzmInput {
+                position: relative;
+                span {
+                    height: 31px;
+                    line-height: 31px;
+                    width: 100px;
+                    position: absolute;
+                    right: 2px;
+                    top: 2px;
+                    img {
+                        display: block;
+                        cursor: pointer;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .verification {
+                margin: 15px 15px 0 15px;
+                color: @verfontColor;
+                font-size: 12px;
+                height: 35px;
+                line-height: 35px;
+                background: #f2f2f2;
+                padding: 0 10px;
+                border: 1px dotted #cccccc;
+            }
+        }
+        .copyBottom {
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}
+
+//登录模型2
+.login2 {
+    background: #333;
+    .header {
+        height: 75px;
+        .header-center {
+            width: 1200px;
+            padding-top: 15px;
+            margin: 0 auto;
+            h1 {
+                float: left;
+                height: 50px;
+                display: block;
+                img {
+                    height: 50px;
+                    display: block;
+                }
+            }
+            >a {
+                height: 50px;
+                line-height: 50px;
+                display: block;
+                float: right;
+                color: #fff;
+                font-size: 18px;
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .body {
+        background: linear-gradient(@background02*1.4, @background02*1, @background02*1);
+        min-height: 500px;
+        .body-center {
+            margin: 0 auto;
+            width: 1300px;
+            padding: 0 50px 50px;
+            background: url(../imgs/loginBg.png) 50px 40px no-repeat;
+            overflow: hidden;
+            .loginForm {
+                margin-top: 50px;
+                width: 600px;
+                height: 350px;
+                float: right;
+                .leftInfo {
+                    float: left;
+                    height: 350px;
+                    width: 300px;
+                    background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0 !important;
+                    filter: Alpha(opacity=50);
+                    background: #fff;
+                    dl {
+                        margin: 100px 0 0 30px;
+                        dt {
+                            font-size: 22px;
+                            color: @fontcolor02;
+                        }
+                        dd {
+                            padding-top: 5px;
+                            font-size: 24px;
+                            color: #fff;
+                            text-shadow: 2px 2px 5px #333;
+                        }
+                    }
+                }
+                .rightForm {
+                    float: right;
+                    height: 350px;
+                    width: 300px;
+                    background: #fff;
+                    padding: 30px;
+                    .rightFormTitle {
+                        text-align: center;
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: @fontcolor02;
+                    }
+                    .ver {
+                        margin-top: 10px;
+                        font-size: 12px;
+                        height: 35px;
+                        line-height: 35px;
+                        color: @verfontColor;
+                        background: #f2f2f2;
+                        padding: 0 10px;
+                        border: 1px dotted @predefinedBorder01;
+                    }
+                    .loginInput {
+                        height: 35px;
+                        line-height: 35px;
+                        margin-top: 15px;
+                        position: relative;
+                        label {
+                            float: left;
+                            display: block;
+                            width: 75px;
+                            border: 1px solid @predefinedBorder01;
+                            height: 35px;
+                            line-height: 35px;
+                            font-size: 12px;
+                            color: #666;
+                            padding-left: 10px;
+                            background: #f2f2f2;
+                            i {
+                                margin-right: 3px;
+                                color: @fontcolor02;
+                            }
+                        }
+                        input {
+                            display: block;
+                            border: 1px solid @predefinedBorder01;
+                            border-left: none;
+                            height: 35px;
+                            line-height: 35px;
+                            float: left;
+                            width: 165px;
+                            padding: 0 5px;
+                        }
+                        >span {
+                            display: block;
+                            width: 70px;
+                            height: 31px;
+                            line-height: 31px;
+                            position: absolute;
+                            top: 2px;
+                            right: 2px;
+                            img {
+                                display: block;
+                                width: 70px;
+                                height: 31px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .loginSent {
+                        padding-top: 15px;
+                        button {
+                            display: block;
+                            width: 100%;
+                            background: @background07*1.1;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            color: #fff;
+                            border: none;
+                            font-size: 14px!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        width: 1200px;
+        margin: 30px auto;
+        dl {
+            color: #fff;
+            dt {
+                font-size: 16px;
+                a {
+                    color: #fff;
+                    margin-right: 10px;
+                }
+            }
+            dd {
+                font-size: 14px;
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+.bodyMainheader {
+    height: 55px;
+    line-height: 55px;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid @predefinedBorder01;
+    background: linear-gradient(left bottom, @background07*1.5, @background07*0.85);
+}
+
+// 首页区块
+.blockList {
+    .blockli {
+        background: #f2f2f2;
+        height: 75px;
+        line-height: 75px;
+        width: 180px;
+        float: left;
+        margin-right: 15px;
+        overflow: hidden;
+        border: 1px solid @predefinedBorder01;
+        span {
+            float: left;
+            text-align: center;
+            height: 75px;
+            line-height: 85px;
+            width: 75px;
+            display: block;
+            background: #e4e4e4;
+            i {
+                font-size: 32px;
+                color: @fontcolor02;
+            }
+        }
+        >div {
+            padding-top: 10px;
+            margin-left: 95px;
+            dl {
+                dt {
+                    padding-top: 5px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #333;
+                }
+                dd {
+                    padding-top: 3px;
+                    font-size: 12px;
+                    color: #666;
+                }
+            }
+        }
+    }
+    .blockEl {
+        padding: 10px 15px 15px 15px;
+        height: 75px;
+        background: #f2f2f2;
+        border: 1px solid @predefinedBorder01;
+        margin-left: 780px;
+        dl {
+            dt {
+                font-size: 14px;
+                color: #333;
+            }
+            dd {
+                padding-top: 5px;
+                font-size: 12px;
+                color: #666;
+            }
+        }
+    }
+}
+
+//统计图
+.bodyEchart {
+    .echart {
+        background: #f2f2f2;
+        height: 375px;
+        width: 500px;
+        margin-right: 15px;
+    }
+}
+
+//修改密码
+.updatePwd {
+    .updatePwdver {
+        border: 1px dotted @predefinedBorder01;
+        background: #FEFBDC;
+        font-size: 12px;
+        padding: 7px;
+        margin-bottom: 15px;
+        strong {
+            float: left;
+            label {
+                font-size: 12px;
+                color: @verfontColor;
+            }
+        }
+    }
+    .upPwd {
+        margin-bottom: 15px;
+        label {
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            text-align: right;
+            font-size: 12px;
+            width: 75px;
+        }
+        .infoShow {
+            input {
+                display: block;
+                width: 100%;
+            }
+            margin-left: 80px;
+        }
+    }
+}
+
+//权限角色
+.roleName {
+    th {
+        font-weight: normal;
+    }
+}
+
+.roleTable {
+    overflow-y: auto;
+    height: 407px;
+    .topRole {
+        margin: 0;
+        font-style: normal;
+        height: 25px;
+        line-height: 25px;
+        display: inline-block;
+        overflow: hidden;
+        >i {
+            font-style: normal;
+            font-weight: normal;
+            float: left;
+            min-width: 55px;
+            max-width: 100px;
+            font-size: 12px;
+            margin-left: 5px;
+            color: #666;
+        }
+        >input {
+            margin-top: 6px;
+            margin-left: 5px;
+            float: left;
+        }
+    }
+    .roleTableSon {
+        width: 100%;
+        .sonRole {
+            label {
+                margin: 0;
+                font-style: normal;
+                height: 25px;
+                line-height: 25px;
+                display: inline-block;
+                overflow: hidden;
+                >i {
+                    font-style: normal;
+                    font-weight: normal;
+                    float: left;
+                    min-width: 55px;
+                    max-width: 100px;
+                    font-size: 12px;
+                    margin-left: 5px;
+                    color: #666;
+                }
+                >input {
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    float: left;
+                }
+            }
+        }
+        .roleCURD {
+            .roleC,
+            .roleU,
+            .roleR,
+            .roleD {
+                margin: 0;
+                font-style: normal;
+                height: 25px;
+                line-height: 25px;
+                display: inline-block;
+                overflow: hidden;
+                label {
+                    margin: 0;
+                    font-style: normal;
+                    height: 25px;
+                    line-height: 25px;
+                    display: inline-block;
+                    overflow: hidden;
+                    >i {
+                        font-style: normal;
+                        font-weight: normal;
+                        float: left;
+                        min-width: 55px;
+                        max-width: 100px;
+                        font-size: 12px;
+                        margin-left: 5px;
+                        color: #666;
+                    }
+                    >input {
+                        margin-top: 5px;
+                        margin-left: 5px;
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.promptGroup {
+    width: 355px;
+    height: 170px;
+    border: 1px solid @predefinedBorder02;
+    margin: 100px auto 0;
+    .promptTitle {
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background: linear-gradient(to bottom, @background07*1.2 0%, @background07*0.95 100%) repeat scroll 0 0;
+        font-size: 14px;
+        color: #fff;
+        border-bottom: 1px solid @predefinedBorder02;
+    }
+    .promptBody {
+        width: 280px;
+        margin: 20px auto 0;
+        overflow: hidden;
+        span {
+            width: 50px;
+            float: left;
+            i {
+                color: @fontcolor02;
+            }
+        }
+        .wrapInfo {
+            margin-left: 50px;
+            dl {
+                dt {
+                    font-size: 14px;
+                    color: #333;
+                }
+                dd {
+                    padding: 10px 0;
+                    font-size: 12px;
+                    a {
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.empty {
+    text-align: center;
+    padding: 70px 0 70px 0;
+    table {
+        margin: 0 auto;
+        tr {
+            i {
+                font-size: 62px;
+                color: #999;
+            }
+            td {
+                padding-top: 15px;
+                font-size: 14px;
+                color: #666;
+            }
+        }
+    }
+}

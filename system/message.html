@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!--bootstrap核心包-->
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!--bootstrap-->
+		<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+		<!--字体图标       -->
+		<link href="../css/root.css" rel="stylesheet" />
+		<script src="../js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<link href="../plugins/jquery-master/jquery-confirm.css" rel="stylesheet">
+		<script src="../plugins/jquery-master/jquery-confirm.js"></script>
+
+		<script src="../js/base.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+	  		<script src="./js/html5shiv.min.js"></script>
+	  		<script src="./js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="pd20">
+			<div class="tipBox mr-b15">
+				<span class="crumbsNavB"><a href="">主页</a><a href="">css3伪类休息</a></span>
+			</div>
+
+			<div class="mr-b15 pd5 clearfix border01">
+				<div class="paginglist pull-left"> <strong>上一页</strong> <span><small>1</small><em>/</em><small>2</small></span> <strong>下一页</strong> <input type="text" />
+					<div>跳转</div>
+				</div>
+			</div>
+			<div class="mr-b15">
+				<table class="table table-bordered table-default table-hover">
+					<colgroup>
+						<col width="50" />
+						<col width="100" />
+						<col width="250" />
+						<col/>
+						<col width="150" />
+						<col width="100" />
+						<col width="120" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>ID </th>
+							<th>用户</th>
+							<th>留言标题</th>
+							<th>留言内容</th>
+							<th>留言时间</th>
+							<th>用户IP</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>12</td>
+							<td>一个大西瓜</td>
+							<td>请问多久可以开发完成啊？</td>
+							<td>我想开发一个网站，请问多久可以开发完成啊？</td>
+							<td>2017-11-20 19:04:38</td>
+							<td>192.168.1.1</td>
+							<td>
+								<button class="btn btn-xs btn-sure readThis"><i class="fa fa-fw fa-eye"></i>查阅</button>
+								<button class="btn btn-xs btn-cancel delThis"><i class="fa fa-fw fa-times"></i>删除</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pd5 clearfix border01">
+				<div class="paginglist pull-left"> <strong>上一页</strong> <span><small>1</small><em>/</em><small>2</small></span> <strong>下一页</strong> <input type="text" />
+					<div>跳转</div>
+				</div>
+			</div>
+		</div>
+
+		<!--模态框-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-default" style="width: 700px;" role="document">
+				<div class="modal-content">
+					<div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">模态框标题</h4> </div>
+					<div class="modal-body">
+						<table class="table table-bordered table-show table-hover">
+							<tbody>
+								<tr>
+									<td width="100" style="background: #f2f2f2;">用户 </td>
+									<td>用户，是指所有接受某一项产品服务的客体，不单指某一类人，泛指所有享受服务的客观事物。 </td>
+								</tr>
+								<tr>
+									<td width="100" style="background: #f2f2f2;">留言标题 </td>
+									<td>标题（title，head），读音biāotí，是标明文章、作品等内容的简短语句，一般分为总标题、副标题、分标题。常言道：看书先看皮，看报先看题，标题可以使读者了解到文章的主要内容和主旨。</td>
+								</tr>
+								<tr>
+									<td width="100" style="background: #f2f2f2;">留言内容 </td>
+									<td>内容，指事物所包含的实质性事物。三层含义：1、物件里面所包容的东西；2.事物内部所含的实质或意义；3.哲学名词，指事物内在因素的总和，与“形式”相对。</td>
+								</tr>
+								
+								<tr>
+									<td width="100" style="background: #f2f2f2;">留言时间 </td>
+									<td>2017-12-7 13:48:54</td>
+								</tr>
+								
+								<tr>
+									<td width="100" style="background: #f2f2f2;">用户IP </td>
+									<td>192.168.1.2</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="modal-footer"> <button type="button" class="btn btn-cancel" data-dismiss="modal">返回</button></div>
+				</div>
+			</div>
+		</div>
+		<!--模态框-->
+
+		<script type="text/javascript">
+			$('.delThis').click(function() {
+				$.confirm({
+					title: '提示信息',
+					content: '您真的确定要删除这条信息吗?',
+					icon: 'fa fa-warning',
+					animateFromElement: false,
+					buttons: {
+						confirm: {
+							text: "确定",
+							btnClass: 'btn-sure',
+							keys: ['enter'],
+							animation: 'zoom',
+							action: function() {
+								$.alert("你点击了确认按钮！")
+							}
+						},
+						cancel: {
+							text: "取消",
+							btnClass: 'btn-cancel',
+							keys: ['esc'],
+							action: function() {
+								$.alert("你点击了取消按钮！")
+							}
+						}
+					}
+				});
+			})
+
+			$('.readThis').click(function() {
+				$('#myModal').modal('show');
+			})
+		</script>
+	</body>
+
+</html>
